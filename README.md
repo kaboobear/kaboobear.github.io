@@ -1,8 +1,8 @@
 <p align="center">
-    <img src="https://img.icons8.com/ios/500/000000/bear.png" alt="Kaboo Logo" width="150" height="150">
+    <img src="<img src="https://img.icons8.com/bubbles/100/000000/rocket.png">" height="150">
 </p>
 
-<h1 align="center">Kaboo Studios</h1>
+<h1 align="center">Kaboo Bear</h1>
 
 [![Forks][forks-shield]][forks-url]
 [![Issues][issues-shield]][issues-url]
@@ -37,26 +37,13 @@
 <h2 align="center">Contact Me</h2>
 
 <div>
-    
-<br>
-    
-<div>
-    <img src="https://img.icons8.com/material/48/000000/github.png">
-    <p>kaboobear</p>
+    <p><b>Telegram:</b> @kaboo_bear </p>
 </div>
 
 <hr>
 
 <div>
-<img src="https://img.icons8.com/color/48/000000/telegram-app.png">
-<p> @kaboo_bear </p>
-</div>
-
-<hr>
-
-<div>
-<img src="https://img.icons8.com/color/48/000000/gmail.png">
-<p> kaboo.bear@gmail.com </p>
+    <p><b>Gmail:</b kaboo.bear@gmail.com </p>
 </div>
 
 <hr>
