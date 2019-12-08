@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+
+
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Developer Tips</title>
+
+    <link rel="shortcut icon" href="https://img.icons8.com/bubbles/50/000000/rocket.png">
+    <link rel="stylesheet" href="libs/animate.css">
+    <link rel="stylesheet" href="libs/fancybox.min.css">
+    <link rel="stylesheet" href="libs/datepicker.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+
+    <div class="to-top"></div>
+
+
+    <div class="preloader">
+        <div class="preloader-inner">
+            <svg class="load-svg" version="1.1" id="L2" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
+                enable-background="new 0 0 100 100" xml:space="preserve">
+                <circle fill="none" stroke="#fff" stroke-width="4" stroke-miterlimit="10" cx="50" cy="50" r="48" />
+                <line fill="none" stroke-linecap="round" stroke="#fff" stroke-width="4" stroke-miterlimit="10" x1="50"
+                    y1="50" x2="85" y2="50.5">
+                    <animateTransform attributeName="transform" dur="2s" type="rotate" from="0 50 50" to="360 50 50"
+                        repeatCount="indefinite" />
+                </line>
+                <line fill="none" stroke-linecap="round" stroke="#fff" stroke-width="4" stroke-miterlimit="10" x1="50"
+                    y1="50" x2="49.5" y2="74">
+                    <animateTransform attributeName="transform" dur="15s" type="rotate" from="0 50 50" to="360 50 50"
+                        repeatCount="indefinite" />
+                </line>
+            </svg>
+        </div>
+    </div>
+
+    <div class="size-locker">
+        <div class="size-locker-text">
+            Screen is Too Big
+        </div>
+    </div>
+
+
+
+
+    <div class="wrapper">
+        <div class="header-section">
+            <div class="container">
+                <a href="#" class="ico">
+                    <div class="img">
+                        <img src="img/ico.png" alt="">
+                    </div>
+
+                    <span class="text">
+                        Developer Tips
+                    </span>
+                </a>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="items-section">
+            <div class="container">
+                <!--------------------------------------------Mobile Menu------------------------------------>
+                <div class="item">
+                    <div class="glob-title">
+                        Mobile Menu
+                    </div>
+
+                    <div class="copy-content">
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+<div class="mobile-nav">
+    <div class="close">
+        <img src="img/times-black.svg" alt="">
+    </div>
+
+    <ul>
+        <li><a href="#">Main</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contacts</a></li>
+    </ul>
+</div>
+
+
+<div class="ham">
+    <img src="img/ham-black.svg" alt="">
+</div>
+                        </textarea>
+
+                            <button class="copy-btn copy-html">
+                                <i class="far fa-file-code"></i>
+                                <span>HTML</span>
+                            </button>
+                        </div>
+
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+.mobile-nav {
+    height: 100vh;
+    width: 320px;
+    position: fixed;
+    right: -360px;
+    top: 0;
+    padding: 30px;
+    padding-top: 80px;
+    background: white;
+    z-index: 100;
+    transition: .3s;
+    box-shadow:0 0 15px 0 rgba(0,0,0,.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-nav.active {
+    right: 0;
+}
+
+.mobile-nav ul li {
+    margin-bottom: 15px;
+}
+
+.mobile-nav ul li a {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: black;
+}
+
+.mobile-nav .close {
+    position: absolute;
+    top:20px;
+    right: 20px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.ham{
+    display: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+@media (max-width:768px){
+    .ham{
+        display: block;
+    }
+}
+
+@media (max-width:500px){
+    .mobile-nav{
+        width: 100%;
+        right:calc(-100% - 40px);
+    }
+}
+                        </textarea>
+
+                            <button class="copy-btn copy-css">
+                                <i class="far fa-file-code"></i>
+                                <span>CSS</span>
+                            </button>
+                        </div>
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+$(".ham").click(function(){
+    $(".mobile-nav").toggleClass('active');
+});
+
+$(".close").click(function(){
+    $(".mobile-nav").toggleClass('active');
+});
+                        </textarea>
+
+                            <button class="copy-btn copy-js">
+                                <i class="far fa-file-code"></i>
+                                <span>JS</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="item">
+                    <!--------------------------------------------Accordeon------------------------------------>
+                    <div class="glob-title">
+                        Accordeon
+                    </div>
+
+                    <div class="copy-content">
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+<div class="acc">
+    <div class="acc-item">
+        <div class="acc-button">
+            One
+        </div>
+
+        <div class="acc-content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit harum, error at sapiente quis
+            beatae aperiam tempora quo rerum aut?
+        </div>
+    </div>
+
+    <div class="acc-item">
+        <div class="acc-button">
+            Two
+        </div>
+
+        <div class="acc-content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit harum, error at sapiente quis
+            beatae aperiam tempora quo rerum aut?
+        </div>
+    </div>
+</div>
+                        </textarea>
+
+                            <button class="copy-btn copy-html">
+                                <i class="far fa-file-code"></i>
+                                <span>HTML</span>
+                            </button>
+                        </div>
+
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+.acc{
+    width:100%;
+}
+
+.acc-item {
+    margin-bottom: 15px;
+}
+
+.acc-button {
+    padding: 15px;
+    padding-right: 45px;
+    cursor: pointer;
+    transition: .3s;
+    position: relative;
+}
+
+.acc-button.active {
+    background: #e0d3d3;
+}
+
+.acc-button:after {
+    content: '';
+    background: url(img/arr-b-black.svg) no-repeat center;
+    width: 20px;
+    height: 12px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .5s;
+}
+
+.acc-button.active:after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.acc-content {
+    display: none;
+    padding: 15px;
+    padding-bottom: 0;
+}
+
+.acc-content.active {
+    display: block;
+}
+                        </textarea>
+
+                            <button class="copy-btn copy-css">
+                                <i class="far fa-file-code"></i>
+                                <span>CSS</span>
+                            </button>
+                        </div>
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+$('.acc-item').on("click", ".acc-button", function () {
+    $('.acc-content').stop();
+        if ($(this).hasClass('active')) { 
+           $(this).next().stop(true).slideUp(500);
+           $(this).removeClass('active');
+        } else {
+           $(this).next().stop(true).slideDown(500);
+           $(this).addClass('active');
+    }
+});
+                        </textarea>
+
+                            <button class="copy-btn copy-js">
+                                <i class="far fa-file-code"></i>
+                                <span>JS</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="item">
+                    <!--------------------------------------------Tabs------------------------------------>
+                    <div class="glob-title">
+                        Tabs
+                    </div>
+
+
+
+                    <div class="site-tabs">
+                        <ul class="site-tabs-buttons">
+                            <li class="active">
+                                <div class="glob-subtitle">Vertical</div>
+                            </li>
+                            <li>
+                                <div class="glob-subtitle">Horizontal</div>
+                            </li>
+                        </ul>
+
+                        <div class="site-tabs-items">
+                            <div class="site-tabs-item active">
+                                <div class="copy-content">
+                                    <div class="copy-element">
+                                        <textarea class="copy-text">
+<div class="tabs">
+    <ul class="tabs-buttons">
+        <li class="active">One</li>
+        <li>Two</li>
+    </ul>
+
+    <div class="tabs-items">
+        <div class="tabs-item active">
+            Lorem ipsum dolor,sequi saepe iure nostrum sed
+            quidem sit amet consectetur adipisicing elit. Ratione sequi saepe iure nostrum sed
+            quidem laborum autem numquam obcaecati velit.
+        </div>
+
+        <div class="tabs-item">
+            Lorem ipsum dolor,sequi saepe iure nostrum sed
+            quidem sit amet consectetur adipisicing elit.
+        </div>
+    </div>
+</div>
+                            </textarea>
+
+                                        <button class="copy-btn copy-html">
+                                            <i class="far fa-file-code"></i>
+                                            <span>HTML</span>
+                                        </button>
+                                    </div>
+
+
+                                    <div class="copy-element">
+                                        <textarea class="copy-text">
+.tabs{
+    width:100%;
+}
+
+.tabs-buttons {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.tabs-buttons li {
+    padding: 15px 45px;
+    cursor: pointer;
+    transition: .3s;
+    position: relative;
+}
+
+.tabs-buttons li.active {
+    background: #e0d3d3;
+}
+
+.tabs-buttons li + li{
+    margin-left: 10px;
+}
+
+.tabs-item{
+    padding: 15px;
+    display: none;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.tabs-item.active{
+    display: block;
+}
+                            </textarea>
+
+                                        <button class="copy-btn copy-css">
+                                            <i class="far fa-file-code"></i>
+                                            <span>CSS</span>
+                                        </button>
+                                    </div>
+
+
+
+                                    <div class="copy-element">
+                                        <textarea class="copy-text">
+$('.tabs-buttons').on('click', 'li:not(.active)', function() {
+    $(this)
+        .addClass('active').siblings().removeClass('active')
+        .parent().next('.tabs-items').find('.tabs-item').fadeOut(0).removeClass('active').eq($(this).index()).fadeIn(500).addClass('active');
+});   
+                            </textarea>
+
+                                        <button class="copy-btn copy-js">
+                                            <i class="far fa-file-code"></i>
+                                            <span>JS</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="site-tabs-item">
+                                <div class="copy-content">
+                                    <div class="copy-element">
+                                        <textarea class="copy-text">
+<div class="tabs">
+    <ul class="tabs-buttons">
+        <li class="active">One</li>
+        <li>Two</li>
+    </ul>
+
+    <div class="tabs-items">
+        <div class="tabs-item active">
+            Lorem ipsum dolor,sequi saepe iure nostrum sed
+            quidem sit amet consectetur adipisicing elit. Ratione sequi saepe iure nostrum sed
+            quidem laborum autem numquam obcaecati velit.
+         </div>
+
+        <div class="tabs-item">
+            Lorem ipsum dolor,sequi saepe iure nostrum sed
+            quidem sit amet consectetur adipisicing elit.
+        </div>
+    </div>
+</div>
+                            </textarea>
+
+                                        <button class="copy-btn copy-html">
+                                            <i class="far fa-file-code"></i>
+                                            <span>HTML</span>
+                                        </button>
+                                    </div>
+
+
+                                    <div class="copy-element">
+                                        <textarea class="copy-text">
+.tabs {
+    width: 100%;
+    display: flex;
+}
+
+.tabs-buttons {
+    width: 250px;
+    margin-right: 20px;
+}
+
+.tabs-buttons li {
+    padding: 15px 45px;
+    cursor: pointer;
+    transition: .3s;
+    position: relative;
+}
+
+.tabs-buttons li.active {
+    background: #e0d3d3;
+}
+
+.tabs-buttons li+li {
+    margin-top: 10px;
+}
+
+.tabs-items {
+    flex: 1;
+}
+
+.tabs-item.active {
+    display: block;
+}
+
+.tabs-item {
+    height: 100%;
+    padding: 15px;
+    display: none;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media (max-width:1199px) {
+    .tabs-buttons {
+        width: 220px;
+    }
+}
+
+@media (max-width:992px) {
+    .tabs-buttons {
+        width: 200px;
+    }
+}
+                            </textarea>
+
+                                        <button class="copy-btn copy-css">
+                                            <i class="far fa-file-code"></i>
+                                            <span>CSS</span>
+                                        </button>
+                                    </div>
+
+
+
+                                    <div class="copy-element">
+                                        <textarea class="copy-text">
+$('.tabs-buttons').on('click', 'li:not(.active)', function() {
+    $(this)
+        .addClass('active').siblings().removeClass('active')
+        .parent().next('.tabs-items').find('.tabs-item').fadeOut(0).removeClass('active').eq($(this).index()).fadeIn(500).addClass('active');
+});   
+                            </textarea>
+
+                                        <button class="copy-btn copy-js">
+                                            <i class="far fa-file-code"></i>
+                                            <span>JS</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+                <div class="item">
+                    <!-- -----------------------------------------------Swiper---------------------------------------------------- -->
+                    <div class="glob-title">
+                        Swiper
+                    </div>
+
+                    <div class="site-tabs">
+                        <ul class="site-tabs-buttons">
+                            <li class="active">
+                                <div class="glob-subtitle">Nav In</div>
+                            </li>
+                            <li>
+                                <div class="glob-subtitle">Nav Out</div>
+                            </li>
+                        </ul>
+
+                        <div class="site-tabs-items">
+                            <div class="site-tabs-item active">
+
+                                <div class="copy-content">
+                                    <div class="copy-element">
+                                        <textarea class="copy-text">
+<div class="swiper-wrap">
+    <div class="swiper-container swiper1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                One
+            </div>
+
+            <div class="swiper-slide">
+                Two
+            </div>
+
+            <div class="swiper-slide">
+                Three
+            </div>
+        </div>
+
+        <div class="swiper-pagination pag1"></div>
+    </div>
+
+    <div class="swiper-button-prev prev1"></div>
+    <div class="swiper-button-next next1"></div>
+</div>
+                                </textarea>
+
+                                        <button class="copy-btn copy-html">
+                                            <i class="far fa-file-code"></i>
+                                            <span>HTML</span>
+                                        </button>
+                                    </div>
+
+
+
+                                    <div class="copy-element">
+                                        <textarea class="copy-text">
+.swiper-wrap{
+    position: relative;
+    padding: 0 40px;
+}
+
+.swiper-container{
+    padding-bottom: 40px;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after{
+    display: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    height: 25px;
+    width: 15px;
+}
+
+.swiper-button-next{
+    background: url(img/arr-r-black.svg) no-repeat center;
+    right:0;
+}
+
+.swiper-button-prev{
+    background: url(img/arr-l-black.svg) no-repeat center;
+    left:0;
+}
+
+.swiper-pagination-bullet{
+    width: 9px !important;
+    height: 9px !important;
+    margin: 0 7px;
+}
+
+.swiper-pagination-bullet-active{
+    background: #000;
+}
+                                </textarea>
+
+                                        <button class="copy-btn copy-css">
+                                            <i class="far fa-file-code"></i>
+                                            <span>CSS</span>
+                                        </button>
+                                    </div>
+
+
+                                    <div class="copy-element">
+                                        <textarea class="copy-text">
+var swiper1 = new Swiper ('.swiper1', {
+    direction: 'horizontal',
+    slidesPerView:1,
+    spaceBetween:30,
+    loop: true,
+    autoplay:true,
+    speed:1500,
+
+    pagination: {
+        el: '.pag1',
+        clickable:true,
+    },
+
+    navigation: {
+        nextEl: '.next1',
+        prevEl: '.prev1',
+    },
+
+    breakpoints: {
+        992: {
+            slidesPerView:3,
+        },
+
+        768: {
+            slidesPerView:2,
+        },
+    },
+})
+                                </textarea>
+
+                                        <button class="copy-btn copy-js">
+                                            <i class="far fa-file-code"></i>
+                                            <span>JS</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="site-tabs-item">
+
+                                <div class="copy-content">
+                                    <div class="copy-element">
+                                        <textarea class="copy-text">
+<div class="swiper-wrap">
+    <div class="swiper-container swiper1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                One
+            </div>
+
+            <div class="swiper-slide">
+                Two
+            </div>
+
+            <div class="swiper-slide">
+                Three
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-box">
+        <div class="swiper-button-prev prev1"></div>
+        <div class="swiper-pagination pag-out pag1"></div>
+        <div class="swiper-button-next next1"></div>
+    </div>
+</div>
+                                </textarea>
+
+                                        <button class="copy-btn copy-html">
+                                            <i class="far fa-file-code"></i>
+                                            <span>HTML</span>
+                                        </button>
+                                    </div>
+
+
+
+                                    <div class="copy-element">
+                                        <textarea class="copy-text">
+.swiper-wrap{
+    position: relative;
+}
+
+.swiper-container{
+    padding-bottom: 40px;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after{
+    display: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: static;
+    height: 25px;
+    width: 15px;
+    margin-top: 0;
+}
+
+.swiper-button-next{
+    background: url(img/arr-r-black.svg) no-repeat center;
+    right:0;
+}
+
+.swiper-button-prev{
+    background: url(img/arr-l-black.svg) no-repeat center;
+    left:0;
+}
+
+.swiper-pagination.pag-out{
+    position: static;
+    padding: 0 25px;
+}
+
+.swiper-pagination-bullet{
+    width: 9px !important;
+    height: 9px !important;
+    margin: 0 7px;
+}
+
+.swiper-pagination-bullet-active{
+    background: #000;
+}
+
+.nav-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}  background: #000;
+                                </textarea>
+
+                                        <button class="copy-btn copy-css">
+                                            <i class="far fa-file-code"></i>
+                                            <span>CSS</span>
+                                        </button>
+                                    </div>
+
+
+                                    <div class="copy-element">
+                                        <textarea class="copy-text">
+var swiper1 = new Swiper ('.swiper1', {
+    direction: 'horizontal',
+    slidesPerView:1,
+    spaceBetween:30,
+    loop: true,
+    autoplay:true,
+    speed:1500,
+
+    pagination: {
+        el: '.pag1',
+        clickable:true,
+    },
+
+    navigation: {
+        nextEl: '.next1',
+        prevEl: '.prev1',
+    },
+
+    breakpoints: {
+        992: {
+            slidesPerView:3,
+        },
+
+        768: {
+            slidesPerView:2,
+        },
+    },
+})
+                                </textarea>
+
+                                        <button class="copy-btn copy-js">
+                                            <i class="far fa-file-code"></i>
+                                            <span>JS</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+                <div class="item">
+                    <!-- ----------------------------------------Popup--------------------------------------- -->
+                    <div class="glob-title">
+                        Popup
+                    </div>
+
+                    <div class="copy-content">
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+    <div id="popup1" class="popup">
+        <div class="popup-inner">
+            <a class="close-btn" onclick="$.fancybox.close();"> </a>
+    
+            <div class="title">
+                Заказать звонок
+            </div>
+    
+            <form action="/">
+                <div class="simple-input">
+                    <input type="text" placeholder="Имя">
+                </div>
+    
+                <div class="simple-input">
+                    <input type="text" placeholder="Телефон">
+                </div>
+    
+    
+                <button class="btn">Отправить</button>
+            </form>
+        </div>
+    </div>
+    
+    
+    <a data-fancybox data-options='{"touch" : false}' href="#popup1" class="btn">Link</a>
+                    </textarea>
+
+                            <button class="copy-btn copy-html">
+                                <i class="far fa-file-code"></i>
+                                <span>HTML</span>
+                            </button>
+                        </div>
+
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+    .popup {
+        display: none;
+        overflow: visible;
+        position: relative;
+        padding: 0;
+        background: none;
+    }
+    
+    .fancybox-close-small {
+        display: none;
+    }
+    
+    .popup .close-btn {
+        width: 22px;
+        height: 22px;
+        display: inline-block;
+        background: url(img/times-white.svg) no-repeat center;
+        position: absolute;
+        right: -25px;
+        top: -25px;
+        cursor:pointer;
+        /* display: none; */
+    }
+    
+    .popup .simple-input{
+        margin-bottom: 15px;
+    }
+    
+    .popup-inner{
+        padding: 20px;
+        padding-top: 65px;
+        background: white;
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        width: 400px;
+        overflow: visible;
+    }
+    
+    .popup .title {
+        font-size: 38px;
+        font-weight: 500;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    
+    @media (max-width:768px){
+        .popup .close-btn{
+            right: -5px;
+            top: -32px;
+        }
+    }
+    
+    @media (max-width:600px){
+        .popup{
+            width: 100%;
+            padding: 0 15px;
+        }
+    
+        .popup-inner{
+            width: 100%;
+        }
+    
+        .popup .title {
+            font-size: 28px;
+        }
+    }
+    
+    @media (max-width:350px){
+        .popup{
+            padding: 0px;
+        }
+    
+        .popup .title {
+            font-size: 25px;
+        }
+    }
+                                                </textarea>
+
+                            <button class="copy-btn copy-css">
+                                <i class="far fa-file-code"></i>
+                                <span>CSS</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+                <div class="item">
+                    <div class="glob-title">
+                        Scroll To The Top
+                    </div>
+
+                    <div class="copy-content">
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+<div class="to-top"></div>
+                                    </textarea>
+
+                            <button class="copy-btn copy-html">
+                                <i class="far fa-file-code"></i>
+                                <span>HTML</span>
+                            </button>
+                        </div>
+
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+.to-top {
+    width: 58px;
+    height: 58px;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    border-radius: 50%;
+    background: url(img/arr-b-black.svg) no-repeat center #fff;
+    background-size: 15px 25px;
+    transform: rotate(180deg);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .3);
+    z-index: 5;
+    cursor: pointer;
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.to-top.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.to-top:hover {
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .5);
+}
+                                    </textarea>
+
+                            <button class="copy-btn copy-css">
+                                <i class="far fa-file-code"></i>
+                                <span>CSS</span>
+                            </button>
+                        </div>
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+$(window).on('scroll', function () {
+    if ($(document).scrollTop() > 300) {
+        $('.to-top').addClass('active');
+    } else {
+        $('.to-top').removeClass('active');
+    }
+})
+
+if ($(document).scrollTop() > 300) {
+    $('.to-top').addClass('active');
+} else {
+    $('.to-top').removeClass('active');
+}
+
+$('.to-top').on('click', function () {
+    $('html, body').animate({
+        scrollTop: 0
+    }, '300');
+}) 
+                                    </textarea>
+
+                            <button class="copy-btn copy-js">
+                                <i class="far fa-file-code"></i>
+                                <span>JS</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="item">
+                    <!-- ----------------------------------------Loader--------------------------------------- -->
+                    <div class="glob-title">
+                        Preloader
+                    </div>
+
+                    <div class="copy-content">
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+<div class="preloader">
+    <div class="preloader-inner">
+        <svg class="load-svg" version="1.1" id="L2" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
+            enable-background="new 0 0 100 100" xml:space="preserve">
+            <circle fill="none" stroke="#fff" stroke-width="4" stroke-miterlimit="10" cx="50" cy="50" r="48" />
+            <line fill="none" stroke-linecap="round" stroke="#fff" stroke-width="4" stroke-miterlimit="10" x1="50"
+                y1="50" x2="85" y2="50.5">
+                <animateTransform attributeName="transform" dur="2s" type="rotate" from="0 50 50" to="360 50 50"
+                    repeatCount="indefinite" />
+            </line>
+            <line fill="none" stroke-linecap="round" stroke="#fff" stroke-width="4" stroke-miterlimit="10" x1="50"
+                y1="50" x2="49.5" y2="74">
+                <animateTransform attributeName="transform" dur="15s" type="rotate" from="0 50 50" to="360 50 50"
+                    repeatCount="indefinite" />
+            </line>
+        </svg>
+    </div>
+</div>
+                                        </textarea>
+
+                            <button class="copy-btn copy-html">
+                                <i class="far fa-file-code"></i>
+                                <span>HTML</span>
+                            </button>
+                        </div>
+
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+.load-svg {
+    width: 100px;
+    height: 100px;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f78888;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left .7s, opacity .7s;
+}
+
+.preloader.active {
+    left: -100vw;
+    opacity: 0;
+}
+                                        </textarea>
+
+                            <button class="copy-btn copy-css">
+                                <i class="far fa-file-code"></i>
+                                <span>CSS</span>
+                            </button>
+                        </div>
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+$(window).on('load', function () {
+    setTimeout(function () {
+        $('.preloader').addClass('active');
+        $('body').css('overflow', 'visible');
+    }, 1500)
+})
+                                        </textarea>
+
+                            <button class="copy-btn copy-js">
+                                <i class="far fa-file-code"></i>
+                                <span>JS</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="item">
+                    <!-- ----------------------------------------Locker--------------------------------------- -->
+                    <div class="glob-title">
+                        Size Locker
+                    </div>
+
+                    <div class="copy-content">
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+<div class="size-locker">
+    <div class="size-locker-text">
+            Screen is Too Big
+    </div>
+</div>
+                                            </textarea>
+
+                            <button class="copy-btn copy-html">
+                                <i class="far fa-file-code"></i>
+                                <span>HTML</span>
+                            </button>
+                        </div>
+
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+.size-locker{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    background: #f78888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 11;
+}
+
+.size-locker-text{
+    font-size: 30px;
+    font-weight: 600;
+    color:#fff;
+    padding: 15px;
+}
+
+@media (max-width:768px){
+    .size-locker{
+        display: flex;
+    }
+
+    body{
+        overflow: hidden !important;
+    }
+}
+                                            </textarea>
+
+                            <button class="copy-btn copy-css">
+                                <i class="far fa-file-code"></i>
+                                <span>CSS</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+                <div class="item">
+                    <!-- ------------------------------------------Datepicker-------------------------------- -->
+                    <div class="glob-title">
+                        Datepicker
+                    </div>
+
+                    <div class="copy-content">
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+<div class="simple-input">
+    <input type="text" class="date-picker">
+</div>
+                                            </textarea>
+
+                            <button class="copy-btn copy-html">
+                                <i class="far fa-file-code"></i>
+                                <span>HTML</span>
+                            </button>
+                        </div>
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+$('.date-picker').datepicker({
+    position: 'right center', // Default position
+    onHide: function (inst) {
+        inst.update('position', 'right center'); // Update the position to the default again
+    },
+    onShow: function (inst, animationComplete) {
+        if (!animationComplete) {
+            var iFits = false;
+            $.each(['right top', 'right bottom', 'right top', 'top center'],
+                function (i, pos) {
+                    if (!iFits) {
+                        inst.update('position', pos);
+                        var fits = isElementInViewport(inst.$datepicker[0]);
+                        if (fits.all) {
+                            iFits = true;
+                        }
+                    }
+                });
+        }
+    },
+
+}).attr('readonly','readonly');
+
+function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    var fitsLeft = (rect.left >= 0 && rect.left <= $(window).width());
+    var fitsTop = (rect.top >= 0 && rect.top <= $(window).height());
+    var fitsRight = (rect.right >= 0 && rect.right <= $(window).width());
+    var fitsBottom = (rect.bottom >= 0 && rect.bottom <= $(window).height());
+    return {
+        top: fitsTop,
+        left: fitsLeft,
+        right: fitsRight,
+        bottom: fitsBottom,
+        all: (fitsLeft && fitsTop && fitsRight && fitsBottom)
+    };
+}
+                                            </textarea>
+
+                            <button class="copy-btn copy-js">
+                                <i class="far fa-file-code"></i>
+                                <span>JS</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <div class="item">
+                    <!-- ------------------------------------------Typing Effect---------------------------------->
+                    <div class="glob-title">
+                        Typing Effect
+                    </div>
+
+                    <div class="copy-content">
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+<span class="typed-text"></span><span class="cursor">&nbsp;</span>
+                                            </textarea>
+
+                            <button class="copy-btn copy-html">
+                                <i class="far fa-file-code"></i>
+                                <span>HTML</span>
+                            </button>
+                        </div>
+
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+.cursor {
+    display: inline-block;
+    background-color: #ccc;
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink .9s infinite;
+    height: 40px;
+    vertical-align: bottom;
+}
+
+@media (max-width:1199px) {
+    .cursor {
+        height: 35px;
+    }
+}
+
+@media (max-width:992px) {
+    .cursor {
+        height: 30px;
+    }
+}
+
+@media (max-width:768px) {
+    .cursor {
+        height: 25px;
+    }
+}
+                                            </textarea>
+
+                            <button class="copy-btn copy-css">
+                                <i class="far fa-file-code"></i>
+                                <span>CSS</span>
+                            </button>
+                        </div>
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+const typedTextSpan = document.querySelector(".typed-text");
+const cursorSpan = document.querySelector(".cursor");
+
+const textArray = ["One", "Two", "Three"];
+// const textArray = ["need technology to show up beauty of products"];
+const typingDelay = 50;
+const erasingDelay = 25;
+const newTextDelay = 1000;
+let textArrayIndex = 0;
+let charIndex = 0;
+
+function type() {
+    if (charIndex < textArray[textArrayIndex].length) {
+        if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingDelay);
+    } else {
+        cursorSpan.classList.remove("typing");
+        setTimeout(erase, newTextDelay);
+    }
+}
+
+function erase() {
+    if (charIndex > 0) {
+        if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, erasingDelay);
+    } else {
+        cursorSpan.classList.remove("typing");
+        textArrayIndex++;
+        if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+        setTimeout(type, typingDelay + 1100);
+    }
+}
+
+if (textArray.length) setTimeout(type, newTextDelay + 250);
+                                            </textarea>
+
+                            <button class="copy-btn copy-js">
+                                <i class="far fa-file-code"></i>
+                                <span>JS</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <!-- <div class="item">
+        <div class="glob-title">
+            Mobile Menu
+        </div>
+
+        <div class="copy-content">
+            <div class="copy-element">
+                <textarea class="copy-text">
+
+                                            </textarea>
+
+                <button class="copy-btn copy-html">
+                    <i class="far fa-file-code"></i>
+                    <span>HTML</span>
+                </button>
+            </div>
+
+
+
+            <div class="copy-element">
+                <textarea class="copy-text">
+
+                                            </textarea>
+
+                <button class="copy-btn copy-css">
+                    <i class="far fa-file-code"></i>
+                    <span>CSS</span>
+                </button>
+            </div>
+
+
+            <div class="copy-element">
+                <textarea class="copy-text">
+
+                                            </textarea>
+
+                <button class="copy-btn copy-js">
+                    <i class="far fa-file-code"></i>
+                    <span>JS</span>
+                </button>
+            </div>
+        </div>
+    </div> -->
+
+                <!-- <div class="item">
+        <div class="glob-title">
+            Mobile Menu
+        </div>
+
+        <div class="copy-content">
+            <div class="copy-element">
+                <textarea class="copy-text">
+
+                                            </textarea>
+
+                <button class="copy-btn copy-html">
+                    <i class="far fa-file-code"></i>
+                    <span>HTML</span>
+                </button>
+            </div>
+
+
+
+            <div class="copy-element">
+                <textarea class="copy-text">
+
+                                            </textarea>
+
+                <button class="copy-btn copy-css">
+                    <i class="far fa-file-code"></i>
+                    <span>CSS</span>
+                </button>
+            </div>
+
+
+            <div class="copy-element">
+                <textarea class="copy-text">
+
+                                            </textarea>
+
+                <button class="copy-btn copy-js">
+                    <i class="far fa-file-code"></i>
+                    <span>JS</span>
+                </button>
+            </div>
+        </div>
+    </div> -->
+
+                <!-- <div class="item">
+        <div class="glob-title">
+            Mobile Menu
+        </div>
+
+        <div class="copy-content">
+            <div class="copy-element">
+                <textarea class="copy-text">
+
+                                            </textarea>
+
+                <button class="copy-btn copy-html">
+                    <i class="far fa-file-code"></i>
+                    <span>HTML</span>
+                </button>
+            </div>
+
+
+
+            <div class="copy-element">
+                <textarea class="copy-text">
+
+                                            </textarea>
+
+                <button class="copy-btn copy-css">
+                    <i class="far fa-file-code"></i>
+                    <span>CSS</span>
+                </button>
+            </div>
+
+
+            <div class="copy-element">
+                <textarea class="copy-text">
+
+                                            </textarea>
+
+                <button class="copy-btn copy-js">
+                    <i class="far fa-file-code"></i>
+                    <span>JS</span>
+                </button>
+            </div>
+        </div>
+    </div> -->
+
+
+            </div>
+        </div>
+
+
+
+        <div class="footer-section">
+            <div class="footer-text">
+                &copy; Powered by <a data-fancybox href="img/auth.jpg" class="auth">Kaboo Bear</a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/clipboard.js"></script>
+    <script src="libs/fancybox.min.js"></script>
+    <script src="libs/datepicker.min.js"></script>
+    <script src="libs/wow.min.js"></script>
+    <script src="script.js"></script>
+</body>
