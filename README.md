@@ -14,12 +14,12 @@
 
  
 
-<a href="https://kaboobear.github.io"> <h2>Kaboo Vue.js Project</h2> </a>
+<a href="https://kaboobear.github.io"> <h2>Developer Tips Project</h2> </a>
 
-### You can use it
-* as your portfolio
-* as your business landing
-* as your own website
+### You can use it as:
+* a quick solution for your page
+* your own framework
+* building blocks
 * just for fun
 
 <br>
