@@ -1,0 +1,825 @@
+// ----------------------------------------------------------------------Mobile Menu-----------------------------------------------------------------
+
+//HTML
+<div class="mobile-nav">
+    <div class="close">
+         <img src="img/times.png" alt="">
+    </div>
+
+    <ul>
+         <li><a href="#">Главная</a></li>
+         <li><a href="#">О проекте</a></li>
+         <li><a href="#">Услуги</a></li>
+         <li><a href="#">Фирмы</a></li>
+         <li><a href="#">Партнерам</a></li>
+         <li><a href="#">Оплата</a></li>
+         <li><a href="#">Контакты</a></li>
+         <li><a href="#">Вопрос ответ</a></li>
+    </ul>
+</div>
+
+
+
+//CSS
+.mobile-nav{
+    height: 100vh;
+    width: 320px;
+    position: fixed;
+    right:-320px;
+    top:0;
+    padding:30px;
+    padding-top: 80px;
+    background:white;
+    z-index: 100;
+    transition: .3s;
+}
+
+.mobile-nav.active{
+    right:0;
+}
+
+.mobile-nav .close{
+    position: absolute;
+    top:35px;
+    right:20px;
+    cursor:pointer;
+}
+
+.mobile-nav ul li{
+    margin-bottom: 20px;
+}
+
+.mobile-nav ul li a{
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color:black;
+}
+
+
+
+//JS
+$(".ham").click(function(){
+    $(".mobile-nav").toggleClass('active');
+});
+
+$(".close").click(function(){
+    $(".mobile-nav").toggleClass('active');
+});
+
+
+
+
+
+//--------------------------------------------------------------Air Datepicker---------------------------------------------------------------------
+
+
+// JS
+
+function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    var fitsLeft = (rect.left >= 0 && rect.left <= $(window).width());
+    var fitsTop = (rect.top >= 0 && rect.top <= $(window).height());
+    var fitsRight = (rect.right >= 0 && rect.right <= $(window).width());
+    var fitsBottom = (rect.bottom >= 0 && rect.bottom <= $(window).height());
+    return {
+        top: fitsTop,
+        left: fitsLeft,
+        right: fitsRight,
+        bottom: fitsBottom,
+        all: (fitsLeft && fitsTop && fitsRight && fitsBottom)
+    };
+}
+
+$('.datepicker-here').datepicker({
+    position: 'right center', // Default position
+    onHide: function (inst) {
+        inst.update('position', 'right center'); // Update the position to the default again
+    },
+    onShow: function (inst, animationComplete) {
+        if (!animationComplete) {
+            var iFits = false;
+            $.each(['right top', 'right bottom', 'right top', 'top center'],
+                function (i, pos) {
+                    if (!iFits) {
+                        inst.update('position', pos);
+                        var fits = isElementInViewport(inst.$datepicker[0]);
+                        if (fits.all) {
+                            iFits = true;
+                        }
+                    }
+                });
+        }
+    },
+
+}).attr('readonly','readonly');
+
+
+
+
+
+//--------------------------------------------------------------Fancybox---------------------------------------------------------------------
+
+//CSS
+
+.popup {
+    display: none;
+    background: none;
+    padding-right: 60px;
+    overflow: visible;
+}
+
+.popup-inner{
+    padding: 45px;
+    padding-top: 30px;
+    background: white;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+}
+
+.fancybox-content {
+    padding: 0;
+}
+
+.fancybox-close-small {
+    display: none;
+}
+
+.popup .close-btn {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    background: url(img/times2.png);
+    position: absolute;
+    right: -45px;
+    opacity: .7;
+    top: 0;
+    transition: .3s;
+}
+
+#mob-contact-popup .close-btn {
+    width: 42px;
+    height: 42px;
+    opacity: 1;
+    top: 0px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(img/close-btn.png) no-repeat center;
+    background-size: cover;
+
+}
+
+.popup .close-btn:hover {
+    opacity: 1;
+}
+
+@media (max-width:600px){
+    #popup21,
+    #popup22{
+        text-align: center;
+    }
+
+    #popup21 .popup-inner,
+    #popup22 .popup-inner {
+        width: 95%;
+        display: inline-block;
+        padding-right:20px;
+        padding-left: 20px;
+        padding-bottom: 50px;
+    }
+
+    .popup .close-btn {
+        top:-50px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .popup .btn{
+        padding:20px 10px;
+        width: 100%;
+    }
+}
+
+
+
+//HTML
+                    
+<a class="close-btn" onclick="$.fancybox.close();" href="javascript:;"> </a>
+
+
+
+
+
+
+
+//--------------------------------------------------------------Tabs---------------------------------------------------------------------
+
+
+//JS
+$(document).ready(function(){
+    $('.tabs .buttons').on('click', 'li:not(.active)', function() {
+        $(this)
+            .addClass('active').siblings().removeClass('active')
+            .parent().parent().next('div.items').find('div.item').fadeOut(0).removeClass('active').eq($(this).index()).fadeIn(500).addClass('active');
+    });    
+})
+
+
+//HTML
+<div class="tabs">
+    <div class="buttons">
+        <ul>
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <div class="items">
+        <div class="item active">
+
+        </div>
+
+
+        <div class="item">
+
+        </div>
+
+
+        <div class="item">
+
+        </div>
+
+
+        <div class="item">
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+//--------------------------------------------------------------Accordeon---------------------------------------------------------------------
+
+//HTML
+
+<div class="acc">
+    <div class="acc-item">
+       <div class="acc-button active">
+
+       </div>
+
+       <div class="acc-content active">
+
+       </div>
+   </div>
+
+   <div class="acc-item">
+       <div class="acc-button">
+
+       </div>
+
+       <div class="acc-content">
+
+       </div>
+   </div>
+
+</div>
+
+//JS
+
+$('.acc-item').on("click", ".acc-button", function () {
+    $('.acc-content').stop();
+        if ($(this).hasClass('active')) { 
+           $(this).next().stop(true).slideUp(500);
+           $(this).removeClass('active');
+        } else {
+           $(this).next().stop(true).slideDown(500);
+           $(this).addClass('active');
+    }
+});
+
+
+
+//CSS
+
+.acc-content{
+    display: none;
+}
+
+.acc-content.active{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------Table-Slider---------------------------------------------------------------
+
+//HTML
+
+                <div class="table-section ">
+
+                    <div class="left">
+                        <div class="row row1">
+                            
+                        </div>
+                        <div class="row row2">
+
+                        </div>
+                        <div class="row row3">
+                            
+                        </div>
+                        <div class="row row4">
+
+                        </div>
+                        <div class="row row5">
+
+                        </div>
+                        <div class="row row6">
+
+                        </div>
+                        <div class="row row7">
+
+                        </div>
+                        <div class="row row8">
+
+                        </div>
+                        <div class="row row9">
+
+                        </div>
+                    </div>
+
+                    <div class="right">
+
+                        <div class="swiper-container swiper2">
+
+                            <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                            <div class="row row1">
+         
+                                            </div>
+        
+                                            <div class="row row2">
+                                                
+                                            </div>
+        
+                                            <div class="row row3">
+        
+                                            </div>
+        
+                                            <div class="row row4">
+            
+                                            </div>
+                                            <div class="row row5">
+        
+                                            </div>
+                                            <div class="row row6">
+        
+                                            </div>
+                                            <div class="row row7">
+        
+                                            </div>
+                                            <div class="row row8">
+        
+                                            </div>
+                                            <div class="row row9">
+        
+                                            </div>
+        
+                                        </div>
+
+
+
+                                <div class="swiper-slide">
+                                        <div class="row row1">
+     
+                                        </div>
+    
+                                        <div class="row row2">
+                                            
+                                        </div>
+    
+                                        <div class="row row3">
+    
+                                        </div>
+    
+                                        <div class="row row4">
+        
+                                        </div>
+                                        <div class="row row5">
+    
+                                        </div>
+                                        <div class="row row6">
+    
+                                        </div>
+                                        <div class="row row7">
+    
+                                        </div>
+                                        <div class="row row8">
+    
+                                        </div>
+                                        <div class="row row9">
+    
+                                        </div>
+    
+                                    </div>
+
+
+
+                                <div class="swiper-slide">
+                                    <div class="row row1">
+ 
+                                    </div>
+
+                                    <div class="row row2">
+
+                                    </div>
+
+                                    <div class="row row3">
+
+                                    </div>
+
+                                    <div class="row row4">
+    
+                                    </div>
+                                    <div class="row row5">
+
+                                    </div>
+                                    <div class="row row6">
+
+                                    </div>
+                                    <div class="row row7">
+
+                                    </div>
+                                    <div class="row row8">
+
+                                    </div>
+                                    <div class="row row9">
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="swiper-button-prev prev2"> <img src="img/arr-l.png" alt=""></div>
+                            <div class="swiper-button-next next2"> <img src="img/arr-r.png" alt=""></div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+//CSS
+
+.table-section {
+    display: flex;
+    position: relative;
+}
+
+.table-section .left {
+    min-width: 120px;
+}
+
+.table-section .left .row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-section .right {
+    width: calc(100% - 120px);
+}
+
+.table-section .right .row {
+
+}
+
+.table-section .right .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-section .next2,
+.table-section .prev2 {
+    display: none;
+    outline: none;
+}
+
+
+
+
+
+
+
+//JS
+
+    var swiper2 = new Swiper('.swiper2', {
+        direction: 'horizontal',
+        slidesPerView: 1,
+        allowTouchMove: false,
+        speed: 1000,
+
+        breakpoints: {
+
+            992: {
+                slidesPerView: 2,
+            },
+
+
+            1199: {
+                slidesPerView: 3
+            }
+
+
+        },
+
+        navigation: {
+            nextEl: '.next2',
+            prevEl: '.prev2',
+        },
+
+    })
+
+
+
+    for (var x = 1; x < 10; x++) {
+        $('.table-section .row' + x).matchHeight();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-------------------------------------------------------Screen Lock--------------------------------------------------------------------
+
+//HTML
+
+    <div class="screen-lock">
+        <div class="text">
+            Screen is too big
+        </div>
+    </div>
+
+
+
+
+//CSS
+
+.screen-lock {
+    width: 100vw;
+    height: 100vh;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.screen-lock .text {
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+@media (max-width:450px) {
+    .screen-lock {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+//------------------------------------------------Simple Popup-------------------------------------------------------------------------
+
+
+
+//HTML
+
+    <div id="popup1" class="popup">
+        <div class="title">
+            Заказать звонок
+        </div>
+
+        <form action="/">
+            <div class="simple-input">
+                <input type="text" placeholder="Имя">
+            </div>
+    
+            <div class="simple-input">
+                <input type="text" placeholder="Телефон">
+            </div>
+
+            <button class="btn">
+                Отправить
+            </button>
+        </form>
+    </div>
+
+
+
+
+
+    <a  data-options='{"touch" : false}' data-fancybox href="#popup1" class="btn">Link</a>
+
+
+
+
+
+//CSS
+
+.popup{
+    display: none;
+    border-radius: 5px;
+    padding: 20px;
+    padding-top: 50px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.popup .btn{
+    width: 100%;
+}
+
+.popup .simple-input{
+    width: 100%;
+}
+
+.popup .title {
+    font-size: 38px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    text-align: center;
+    display: block;
+}
+
+.popup .simple-input input{
+    border-radius: 5px;
+    border: 1px solid #c4c4c4;
+    background-color: #fbf5ee;
+    color: #000;
+    font-size: 18px;
+    font-weight: 300;
+    width: 100%;
+    padding: 15px;   margin-right: 12px;
+    margin-bottom: 12px;
+}
+
+.popup .simple-input input:focus {
+    border-color: #e2ad22;
+}
+
+.popup .simple-input input::placeholder {
+    opacity:0.7;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+//--------------------------------------------------------------Radio Button---------------------------------------------------------------
+
+//HTML
+
+    <label class="radio-label">
+        <input type="radio" name="one" value="1">
+        <span class="box"></span>
+        <span class="text">
+            One
+        </span>
+    </label>
+
+    <label class="radio-label">
+        <input type="radio" name="one" value="1">
+        <span class="box"></span>
+        <span class="text">
+            Two
+        </span>
+    </label>
+
+    <label class="radio-label">
+        <input type="radio" name="one" value="1">
+        <span class="box"></span>
+        <span class="text">
+            Three
+        </span>
+    </label>
+
+
+
+
+//CSS
+
+.radio-label{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.radio-label input{
+    display: none;
+}
+
+.radio-label span{
+    display: inline-block;
+}
+
+.radio-label .box{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border:2px solid #e2ad22;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radio-label input ~ .box:before{
+    content:'';
+    background: #e2ad22;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    padding-left: 2px;
+    padding-top: 2px;
+    opacity: 0;
+    transition: .3s;
+}
+
+.radio-label input:checked ~ .box:before{
+    opacity: 1;
+}
+
+.radio-label .text{
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//--------------------------------------------------------------------Smooth Scroll--------------------------------------------------------------------
+
+	//JS
+
+      $(".smooth").on('click', function () {
+          var elementClick = $(this).attr("href");
+          var destination = $(elementClick).offset().top;
+          jQuery("html:not(:animated),body:not(:animated)").animate({
+              scrollTop: destination
+          }, 800);
+          return false;
+      });
