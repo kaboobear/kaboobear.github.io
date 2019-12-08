@@ -686,62 +686,6 @@ textarea:focus::placeholder {
 
 /* Test */
 
-.page1 {
-    background: #f00;
-    height: 250vh;
-}
-
-
-.cursor {
-    display: inline-block;
-    background-color: #ccc;
-    margin-left: 0.1rem;
-    width: 3px;
-    animation: blink .9s infinite;
-    height: 40px;
-    vertical-align: bottom;
-}
-
-@media (max-width:1199px) {
-    .cursor {
-        height: 35px;
-    }
-}
-
-@media (max-width:992px) {
-    .cursor {
-        height: 30px;
-    }
-}
-
-@media (max-width:768px) {
-    .cursor {
-        height: 25px;
-    }
-}
-
-
-@keyframes blink {
-    0% {
-        background-color: #ccc;
-    }
-
-    25% {
-        background-color: #ccc;
-    }
-
-    50% {
-        background-color: transparent;
-    }
-
-    75% {
-        background-color: transparent;
-    }
-
-    100% {
-        background-color: #ccc;
-    }
-}
 
 
 
