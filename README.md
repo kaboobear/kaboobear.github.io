@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="<img src="https://img.icons8.com/bubbles/100/000000/rocket.png" width="150" height="150">
+    <img src="https://img.icons8.com/bubbles/100/000000/rocket.png" width="150" height="150">
 </p>
 
 <h1 align="center">Kaboo Bear</h1>
@@ -16,17 +16,17 @@
 
 <a href="https://kaboobear.github.io"> <h2>Developer Tips Project</h2> </a>
 
-### You can use it as:
-* a quick solution for your page
-* your own framework
-* building blocks
+### You can use it:
+* as a quick solution for your project
+* as your own framework
+* as building blocks for your page
 * just for fun
 
 <br>
 <br>
 
 
-<h2 align="center">Layout</h2>
+<h2 align="center">Screen</h2>
 
 ![Layout](kaboo.png)
 
@@ -43,7 +43,7 @@
 <hr>
 
 <div>
-    <p><b>Gmail:</b kaboo.bear@gmail.com </p>
+    <p><b>Gmail:</b> kaboo.bear@gmail.com </p>
 </div>
 
 <hr>
