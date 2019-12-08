@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://img.icons8.com/bubbles/100/000000/rocket.png" width="150" height="150">
+    <img src="https://img.icons8.com/bubbles/100/000000/rocket.png" width="50" height="50">
 </p>
 
 <h1 align="center">Kaboo Bear</h1>
