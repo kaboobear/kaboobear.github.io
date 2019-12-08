@@ -137,6 +137,6 @@ $(window).on('load', function () {
     setTimeout(function () {
         $('.preloader').addClass('active');
         $('body').css('overflow', 'visible');
-    }, 150)
+    }, 1500)
 
 })
