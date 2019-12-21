@@ -823,3 +823,94 @@ $('.acc-item').on("click", ".acc-button", function () {
           }, 800);
           return false;
       });
+
+
+
+
+
+
+
+
+
+
+//------------------------Hamburger Icon Animation----------------
+
+//CSS
+
+.ham {
+    width: 45px;
+    height: 38px;
+    position: relative;
+    margin: 50px auto;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.ham span {
+    display: block;
+    position: absolute;
+    height: 7px;
+    width: 100%;
+    background: #000;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.ham span:nth-child(1) {
+    top: 0px;
+}
+
+.ham span:nth-child(2),
+.ham span:nth-child(3) {
+    top: 13px;
+}
+
+.ham span:nth-child(4) {
+    top: 26px;
+}
+
+.ham.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+.ham.open span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.ham.open span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.ham.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+
+
+
+
+//HTML
+
+        <div class="ham">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+        </div>
+
+
+
+
+//JS
+
+    $(".ham").click(function () {
+        $(this).toggleClass('open');
+    });

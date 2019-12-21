@@ -87,7 +87,7 @@
                             <textarea class="copy-text">
 <div class="mobile-nav">
     <div class="close">
-        <img src="img/times-black.svg" alt="">
+        <img src="img/my-times.svg" alt="">
     </div>
 
     <ul>
@@ -101,7 +101,7 @@
 
 
 <div class="ham">
-    <img src="img/ham-black.svg" alt="">
+    <img src="img/my-ham.svg" alt="">
 </div>
                         </textarea>
 
@@ -268,12 +268,13 @@ $(".close").click(function(){
 }
 
 .acc-button.active {
-    background: #e0d3d3;
+    background: rgba(0,0,0,.3);
 }
 
 .acc-button:after {
     content: '';
-    background: url(img/arr-b-black.svg) no-repeat center;
+    background: url(img/my-arr-b.svg) no-repeat center;
+    /* filter:invert(100%); */
     width: 20px;
     height: 12px;
     position: absolute;
@@ -774,15 +775,16 @@ var swiper1 = new Swiper ('.swiper1', {
     height: 25px;
     width: 15px;
     margin-top: 0;
+    background: url(img/my-arr-l.svg) no-repeat center;
+    /* filter:invert(100%); */
 }
 
 .swiper-button-next{
-    background: url(img/arr-r-black.svg) no-repeat center;
+    transform: rotate(180deg);
     right:0;
 }
 
 .swiper-button-prev{
-    background: url(img/arr-l-black.svg) no-repeat center;
     left:0;
 }
 
@@ -805,7 +807,7 @@ var swiper1 = new Swiper ('.swiper1', {
     display: flex;
     align-items: center;
     justify-content: center;
-}  background: #000;
+} 
                                 </textarea>
 
                                         <button class="copy-btn copy-css">
@@ -877,7 +879,7 @@ var swiper1 = new Swiper ('.swiper1', {
                             <textarea class="copy-text">
     <div id="popup1" class="popup">
         <div class="popup-inner">
-            <a class="close-btn" onclick="$.fancybox.close();"> </a>
+            <a class="close-btn invert" onclick="$.fancybox.close();"> </a>
     
             <div class="title">
                 Заказать звонок
@@ -928,7 +930,7 @@ var swiper1 = new Swiper ('.swiper1', {
         width: 22px;
         height: 22px;
         display: inline-block;
-        background: url(img/times-white.svg) no-repeat center;
+        background: url(img/my-times.svg) no-repeat center;
         position: absolute;
         right: -25px;
         top: -25px;
@@ -1008,6 +1010,7 @@ var swiper1 = new Swiper ('.swiper1', {
 
 
                 <div class="item">
+                    <!-- ----------------------------------------To The Top------------------------------------------>
                     <div class="glob-title">
                         Scroll To The Top
                     </div>
@@ -1035,7 +1038,7 @@ var swiper1 = new Swiper ('.swiper1', {
     bottom: 20px;
     right: 30px;
     border-radius: 50%;
-    background: url(img/arr-b-black.svg) no-repeat center #fff;
+    background: url(img/my-arr-b.svg) no-repeat center #fff;
     background-size: 15px 25px;
     transform: rotate(180deg);
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, .3);
@@ -1178,6 +1181,18 @@ $(window).on('load', function () {
         $('body').css('overflow', 'visible');
     }, 1500)
 })
+
+//For static image
+// $('a').click(function (e) {
+//     if ($(this).attr('href')[0] != '#') {
+//         var href = $(this).attr('href');
+//         e.preventDefault();
+//         $('.preloader').removeClass('active');
+//         setTimeout(function () {
+//             window.location.href = href;
+//         }, 700)
+//     }
+// })
                                         </textarea>
 
                             <button class="copy-btn copy-js">

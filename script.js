@@ -86,7 +86,40 @@ $(document).ready(function () {
 
 
 
+
+
+
+
     //Test
+
+    var swiper1 = new Swiper('.swiper1', {
+        direction: 'horizontal',
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: true,
+        speed: 1500,
+
+        pagination: {
+            el: '.pag1',
+            clickable: true,
+        },
+
+        navigation: {
+            nextEl: '.next1',
+            prevEl: '.prev1',
+        },
+
+        breakpoints: {
+            992: {
+                slidesPerView: 3,
+            },
+
+            768: {
+                slidesPerView: 2,
+            },
+        },
+    })
 
 
 })
