@@ -657,7 +657,6 @@ $('.tabs-buttons').on('click', 'li:not(.active)', function() {
     left:0;
 }
 
-
 .swiper-pagination-bullet{
     width: 9px !important;
     height: 9px !important;
@@ -1966,14 +1965,118 @@ $('select').niceSelect();
 
 
                 <div class="item">
+                    <!--------------------------------------------Table-Slider------------------------------------>
                     <div class="glob-title">
-                        Mobile Menu
+                        Table-Slider
                     </div>
 
                     <div class="copy-content">
                         <div class="copy-element">
                             <textarea class="copy-text">
+<div class="table-section">
+    <div class="left">
+        <div class="row row1">
+            <div class="nav-box">
+                <div class="swiper-button-prev prev-table"></div>
+                <div class="swiper-button-next next-table"></div>
+            </div>
+        </div>
+        <div class="row row2">1 кг</div>
+        <div class="row row3">2 кг</div>
+        <div class="row row4">3 кг</div>
+        <div class="row row5">4 кг</div>
+    </div>
 
+    <div class="right">
+        <div class="swiper-container swiper-table">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="row row1">
+                        Lavazza Crema Aroma
+                    </div>
+
+                    <div class="row row2">
+                        2 800 р.
+                    </div>
+
+                    <div class="row row3">
+                        4 000 р.
+                    </div>
+
+                    <div class="row row4">
+                        4 000 р.
+                    </div>
+                    <div class="row row5">
+                        4 000 р.
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="row row1">
+                        Lavazza Crema Aroma
+                    </div>
+
+                    <div class="row row2">
+                        2 800 р.
+                    </div>
+
+                    <div class="row row3">
+                        4 000 р.
+                    </div>
+
+                    <div class="row row4">
+                        4 000 р.
+                    </div>
+                    <div class="row row5">
+                        4 000 р.
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="row row1">
+                        Lavazza Crema Aroma
+                    </div>
+
+                    <div class="row row2">
+                        2 800 р.
+                    </div>
+
+                    <div class="row row3">
+                        4 000 р.
+                    </div>
+
+                    <div class="row row4">
+                        4 000 р.
+                    </div>
+                    <div class="row row5">
+                        4 000 р.
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="row row1">
+                        Lavazza Crema Aroma
+                    </div>
+
+                    <div class="row row2">
+                        2 800 р.
+                    </div>
+
+                    <div class="row row3">
+                        4 000 р.
+                    </div>
+
+                    <div class="row row4">
+                        4 000 р.
+                    </div>
+                    <div class="row row5">
+                        4 000 р.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
                                             </textarea>
 
                             <button class="copy-btn copy-html">
@@ -1986,7 +2089,104 @@ $('select').niceSelect();
 
                         <div class="copy-element">
                             <textarea class="copy-text">
+.table-section {
+    background: #fff;
+    display: flex;
+    position: relative;
+}
 
+.table-section .left {
+    min-width: 120px;
+}
+
+.table-section .left .row {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-section .left .row:first-child {
+    position: relative;
+}
+
+.table-section .right {
+    width: calc(100% - 120px);
+}
+
+.table-section .right .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.table-section .right .swiper-slide .row:not(:first-child) {
+    border-top: 1px solid #e8ddd0;
+    border-left: 1px solid #e8ddd0;
+}
+
+.table-section .left .row:not(:first-child) {
+    border-top: 1px solid #e8ddd0;
+}
+
+.table-section .next2,
+.table-section .prev2 {
+    display: none;
+    outline: none;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    display: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: static;
+    height: 25px;
+    width: 15px;
+    margin-top: 0;
+    background: url(img/my-arr-l.svg) no-repeat center;
+    display: none;
+    /* filter:invert(100%); */
+}
+
+.swiper-button-next {
+    transform: rotate(180deg);
+    right: 0;
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+
+.nav-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@media (max-width:1199px) {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: block;
+    }
+}
+
+@media (max-width:700px) {
+    .table-section .left {
+        min-width: 75px;
+    }
+
+    .table-section .right {
+        width: calc(100% - 75px);
+    }
+}
                                             </textarea>
 
                             <button class="copy-btn copy-css">
@@ -1998,7 +2198,35 @@ $('select').niceSelect();
 
                         <div class="copy-element">
                             <textarea class="copy-text">
+var rows = $('.table-section .left > *').length;
+for (var x = 1; x <= rows; x++) {
+    $('.table-section .row' + x).matchHeight();
+}
 
+var swiperTable = new Swiper('.swiper-table', {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    allowTouchMove: false,
+    speed: 500,
+
+    breakpoints: {
+        700: {
+            slidesPerView: 2,
+        },
+
+        992: {
+            slidesPerView: 3,
+        },
+        1199: {
+            slidesPerView: 4
+        }
+    },
+
+    navigation: {
+        nextEl: '.next-table',
+        prevEl: '.prev-table',
+    },
+})
                                             </textarea>
 
                             <button class="copy-btn copy-js">

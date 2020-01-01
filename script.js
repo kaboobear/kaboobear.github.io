@@ -92,12 +92,16 @@ $(document).ready(function () {
 
     //Test
 
+    var rows = $('.table-section .left > *').length;
+    for (var x = 1; x <= rows; x++) {
+        $('.table-section .row' + x).matchHeight();
+    }
 
-    var swiper2 = new Swiper('.swiper-table', {
+    var swiperTable = new Swiper('.swiper-table', {
         direction: 'horizontal',
         slidesPerView: 1,
         allowTouchMove: false,
-        speed: 1000,
+        speed: 500,
 
         breakpoints: {
             700: {
@@ -116,14 +120,7 @@ $(document).ready(function () {
             nextEl: '.next-table',
             prevEl: '.prev-table',
         },
-
     })
-
-
-
-    for (var x = 1; x < 10; x++) {
-        $('.table-section .row' + x).matchHeight();
-    }
 
     //Test End
 

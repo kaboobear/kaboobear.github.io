@@ -50,13 +50,13 @@
 ::-webkit-scrollbar {
     width: 4px;
 }
- 
+
 ::-webkit-scrollbar-track {
     background-color: #fff;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #f78888; 
+    background: #f78888;
 }
 
 ul {
@@ -122,23 +122,23 @@ input[type=number] {
     animation-duration: .6s;
 }
 
-.flex-wrap{
+.flex-wrap {
     display: flex;
 }
 
-.invert{
-    filter:invert(100%);
+.invert {
+    filter: invert(100%);
 }
 
-.rotate{
+.rotate {
     transform: rotate(180deg);
 }
 
-.animate{
+.animate {
     transition: .3s;
 }
 
-.animate:hover{
+.animate:hover {
     opacity: .7;
 }
 
@@ -264,7 +264,8 @@ input:focus {
 
 textarea::placeholder,
 input::placeholder {
-    opacity: .7;;
+    opacity: .7;
+    ;
     transition: .3s;
 }
 
@@ -285,7 +286,7 @@ textarea:focus::placeholder {
     padding-top: 50px;
 }
 
-.items-section .container{
+.items-section .container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -301,8 +302,8 @@ textarea:focus::placeholder {
     display: inline-block;
     padding: 25px;
     border-radius: 10px;
-    background: rgba(0,0,0,.05);
-    border:5px solid rgba(0,0,0,.1);
+    background: rgba(0, 0, 0, .05);
+    border: 5px solid rgba(0, 0, 0, .1);
     overflow: hidden;
 }
 
@@ -675,10 +676,10 @@ textarea:focus::placeholder {
     opacity: 0;
 }
 
-.size-locker{
+.size-locker {
     position: absolute;
-    left:0;
-    top:0;
+    left: 0;
+    top: 0;
     width: 100vw;
     height: 100vh;
     background: #f78888;
@@ -689,23 +690,23 @@ textarea:focus::placeholder {
     z-index: 11;
 }
 
-.size-locker-text{
+.size-locker-text {
     font-size: 30px;
     font-weight: 600;
-    color:#fff;
+    color: #fff;
     padding: 15px;
 }
 
-@media (max-width:768px){
-    .size-locker{
+@media (max-width:768px) {
+    .size-locker {
         display: flex;
     }
 
-    body{
+    body {
         overflow: hidden !important;
     }
 }
-                                            
+
 
 
 
@@ -718,7 +719,7 @@ textarea:focus::placeholder {
 
 /* Test */
 
-.page1{
+.page1 {
     width: 100vw;
     height: 200vh;
     background: #f00;
@@ -744,6 +745,10 @@ textarea:focus::placeholder {
     justify-content: center;
 }
 
+.table-section .left .row:first-child {
+    position: relative;
+}
+
 .table-section .right {
     width: calc(100% - 120px);
 }
@@ -761,7 +766,6 @@ textarea:focus::placeholder {
     border-left: 1px solid #e8ddd0;
 }
 
-
 .table-section .left .row:not(:first-child) {
     border-top: 1px solid #e8ddd0;
 }
@@ -772,87 +776,10 @@ textarea:focus::placeholder {
     outline: none;
 }
 
-
-@media(max-width:1199px) {
-
-
-
-}
-
-@media(max-width:700px) {
-    .table-section .left {
-        min-width: 75px;
-    }
-
-    .table-section .right {
-        width: calc(100% - 75px);
-    }
-
-    .table-section .right .row {
-        font-size: 20px;
-    }
-
-    .table-section .left .row {
-        font-size: 20px;
-        padding: 15px 10px;
-    }
-}
-
-
-
-
-
 .swiper-button-prev:after,
-.swiper-button-next:after{
+.swiper-button-next:after {
     display: none;
 }
-
-.swiper-button-prev,
-.swiper-button-next {
-    height: 25px;
-    width: 15px;
-}
-
-.swiper-button-next{
-    background: url(img/arr-r-b.svg) no-repeat center;
-    right:0;
-}
-
-.swiper-button-prev{
-    background: url(img/arr-l-b.svg) no-repeat center;
-    left:0;
-}
-
-
-                                
-
-
-
-
-
-
-
-
-
-
-.swiper-button-prev,
-.swiper-button-next {
-    height: 25px;
-    width: 15px;
-}
-
-.swiper-button-next{
-    background: url(img/arr-r-black.svg) no-repeat center;
-    right:0;
-}
-
-.swiper-button-prev{
-    background: url(img/arr-l-black.svg) no-repeat center;
-    left:0;
-}
-
-
-
 
 .swiper-button-prev,
 .swiper-button-next {
@@ -861,14 +788,40 @@ textarea:focus::placeholder {
     width: 15px;
     margin-top: 0;
     background: url(img/my-arr-l.svg) no-repeat center;
+    display: none;
     /* filter:invert(100%); */
 }
 
-.swiper-button-next{
+.swiper-button-next {
     transform: rotate(180deg);
-    right:0;
+    right: 0;
 }
 
-.swiper-button-prev{
-    left:0;
+.swiper-button-prev {
+    left: 0;
+}
+
+.nav-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@media (max-width:1199px) {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: block;
+    }
+}
+
+@media (max-width:700px) {
+    .table-section .left {
+        min-width: 75px;
+    }
+
+    .table-section .right {
+        width: calc(100% - 75px);
+    }
 }
