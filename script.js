@@ -92,34 +92,40 @@ $(document).ready(function () {
 
     //Test
 
-    var swiper1 = new Swiper('.swiper1', {
+
+    var swiper2 = new Swiper('.swiper-table', {
         direction: 'horizontal',
         slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        autoplay: true,
-        speed: 1500,
-
-        pagination: {
-            el: '.pag1',
-            clickable: true,
-        },
-
-        navigation: {
-            nextEl: '.next1',
-            prevEl: '.prev1',
-        },
+        allowTouchMove: false,
+        speed: 1000,
 
         breakpoints: {
+            700: {
+                slidesPerView: 2,
+            },
+
             992: {
                 slidesPerView: 3,
             },
-
-            768: {
-                slidesPerView: 2,
-            },
+            1199: {
+                slidesPerView: 4
+            }
         },
+
+        navigation: {
+            nextEl: '.next-table',
+            prevEl: '.prev-table',
+        },
+
     })
+
+
+
+    for (var x = 1; x < 10; x++) {
+        $('.table-section .row' + x).matchHeight();
+    }
+
+    //Test End
 
 
 })
