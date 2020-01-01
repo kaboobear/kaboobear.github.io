@@ -2245,49 +2245,129 @@ var swiperTable = new Swiper('.swiper-table', {
 
 
 
-                <!-- <div class="item">
-        <div class="glob-title">
-            Mobile Menu
-        </div>
+                <div class="item">
+                    <!--------------------------------------------Price Filter------------------------------------>
+                    <div class="glob-title">
+                        Price Filter
+                    </div>
 
-        <div class="copy-content">
-            <div class="copy-element">
-                <textarea class="copy-text">
+                    <div class="copy-content">
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+<div class="price-filter-block">
+    <div class="values">
+        <input type="text" class="from" disabled>
+        <div class="dash">-</div>
+        <input type="text" class="to" disabled>
+    </div>
 
+    <div id="priceFilter"></div>
+</div>
                                             </textarea>
 
-                <button class="copy-btn copy-html">
-                    <i class="far fa-file-code"></i>
-                    <span>HTML</span>
-                </button>
-            </div>
+                            <button class="copy-btn copy-html">
+                                <i class="far fa-file-code"></i>
+                                <span>HTML</span>
+                            </button>
+                        </div>
 
 
 
-            <div class="copy-element">
-                <textarea class="copy-text">
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+.price-filter-block{
+    width: 100%;
+}
 
+.values {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.values .dash {
+    margin: 0 5px;
+}
+
+.values input {
+    padding: 12px 0px;
+    font-size: 14px;
+    background: none;
+    width:auto;
+    width: 60px;
+}
+
+.values input.to{
+    text-align: right;
+}
+
+.noUi-handle-upper,
+.noUi-handle-lower {
+    width: 15px !important;
+    height: 15px !important;
+    background-color: #555 !important;
+    border-radius: 50% !important;
+    right:-8px !important;
+}
+
+.noUi-connect {
+    background: #555 !important;
+}
+
+.noUi-handle {
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+        top: -6px !important;
+}
+
+.noUi-handle:before,
+.noUi-handle:after {
+    display: none !important;
+}
+
+.noUi-target {
+    height: 2px !important;
+    background: #dadada !important;
+    border: none !important;
+}
                                             </textarea>
 
-                <button class="copy-btn copy-css">
-                    <i class="far fa-file-code"></i>
-                    <span>CSS</span>
-                </button>
-            </div>
+                            <button class="copy-btn copy-css">
+                                <i class="far fa-file-code"></i>
+                                <span>CSS</span>
+                            </button>
+                        </div>
 
 
-            <div class="copy-element">
-                <textarea class="copy-text">
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+var priceFilter = document.getElementById('priceFilter');
 
+noUiSlider.create(priceFilter, {
+    start: [0, 300],
+    connect: true,
+    step: 1,
+    range: {
+        'min': 0,
+        'max': 1000
+    }
+});
+
+priceFilter.noUiSlider.on('update', function (values, handle) {
+    var values = priceFilter.noUiSlider.get();
+    $('.from').val(Math.floor(values[0].substr()));
+    $('.to').val(Math.floor(values[1]));
+});
                                             </textarea>
 
-                <button class="copy-btn copy-js">
-                    <i class="far fa-file-code"></i>
-                    <span>JS</span>
-                </button>
-            </div>
-        </div>
-    </div> -->
+                            <button class="copy-btn copy-js">
+                                <i class="far fa-file-code"></i>
+                                <span>JS</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
 
 

@@ -92,40 +92,12 @@ $(document).ready(function () {
 
     //Test
 
-    var rows = $('.table-section .left > *').length;
-    for (var x = 1; x <= rows; x++) {
-        $('.table-section .row' + x).matchHeight();
-    }
 
-    var swiperTable = new Swiper('.swiper-table', {
-        direction: 'horizontal',
-        slidesPerView: 1,
-        allowTouchMove: false,
-        speed: 500,
 
-        breakpoints: {
-            700: {
-                slidesPerView: 2,
-            },
-
-            992: {
-                slidesPerView: 3,
-            },
-            1199: {
-                slidesPerView: 4
-            }
-        },
-
-        navigation: {
-            nextEl: '.next-table',
-            prevEl: '.prev-table',
-        },
-    })
 
     //Test End
 
-
-})
+});
 
 
 
