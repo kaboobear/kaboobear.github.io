@@ -110,9 +110,6 @@ $(document).ready(function () {
         //     }, {
         //         // preset: 'islands#icon',
         //         // iconColor: '#f78888'
-        //         iconLayout: 'default#image',
-        //         iconImageHref: 'img/ico.png', // картинка иконки
-        //         iconImageSize: [30, 30], // размеры картинки
         //     }));
 
 
@@ -120,9 +117,8 @@ $(document).ready(function () {
             hintContent: 'Baloon Hint',
             balloonContent: 'Baloon Content'
         }, {
-            iconLayout: 'default#image',
-            iconImageHref: 'img/ico.png',
-            iconImageSize: [50, 50],
+            preset: 'islands#icon',
+            iconColor: '#f78888'
         });
 
         myMap.geoObjects
