@@ -99,23 +99,17 @@ $(document).ready(function () {
 
     //Test
 
-    $(".formName").validate({
-        rules: {
-            name: {
-                required: true,
-                minlength: 2,
-                normalizer: function (value) {
-                    return $.trim(value);
-                }
-            },
-            pass: {
-                required: true,
-                normalizer: function (value) {
-                    return $.trim(value);
-                }
+    var t = $(".file-input");
+    Array.prototype.forEach.call(t, function (e) {
+        e.addEventListener("change", function (e) {
+            t = this.files;
+            if (this.files.length > 1) {
+                $(".file-result").text(this.files.length + " files");
+            } else {
+                $(".file-result").text(e.target.value.split("\\").pop());
             }
-        }
-    });
+        })
+    })
 
     //Test End
 
