@@ -101,29 +101,6 @@ $(document).ready(function () {
         });
 
         myMap.behaviors.disable('scrollZoom');
-
-
-        // myMap.geoObjects
-        //     .add(new ymaps.Placemark([55.964596, 37.912037], {
-        //         hintContent: 'Custom Baloon Hint',
-        //         balloonContent: 'Custom Baloon'
-        //     }, {
-        //         // preset: 'islands#icon',
-        //         // iconColor: '#f78888'
-        //     }));
-
-
-        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Baloon Hint',
-            balloonContent: 'Baloon Content'
-        }, {
-            preset: 'islands#icon',
-            iconColor: '#f78888'
-        });
-
-        myMap.geoObjects
-            .add(myPlacemark);
-
     }
 
     //Test End
