@@ -96,20 +96,34 @@ $(document).ready(function () {
 
     function init() {
         var myMap = new ymaps.Map("map", {
-            center: [55.964596, 37.912037],
-            zoom: 19
-        })
-        
+                center: [55.964596, 37.912037],
+                zoom: 19
+            }),
+            myGeoObject = new ymaps.GeoObject({
+                // Описание геометрии.
+                geometry: {
+                    type: "Point",
+                    coordinates: [55.964596, 37.912037]
+                },
+                properties: {
+                    iconContent: '',
+                    hintContent: ''
+                }
+            });
+
+
         myMap.geoObjects
-        .add(new ymaps.Placemark([55.964596, 37.912037], {
-            balloonContent: 'Custom baloon'
-        }, {
-            preset: 'islands#icon',
-            iconColor: '#f78888'
-        }));
+            .add(myGeoObject)
+            .add(new ymaps.Placemark([55.964596, 37.912037], {
+                balloonContent: 'Custom Baloon'
+            }, {
+                preset: 'islands#icon',
+                iconColor: '#f78888'
+            }));
+
 
         myMap.behaviors.disable('scrollZoom');
-    }                      
+    }
 
     //Test End
 
