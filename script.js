@@ -117,8 +117,17 @@ $(document).ready(function () {
             .add(new ymaps.Placemark([55.964596, 37.912037], {
                 balloonContent: 'Custom Baloon'
             }, {
-                preset: 'islands#icon',
-                iconColor: '#f78888'
+                // preset: 'islands#icon',
+                // iconColor: '#f78888'
+                iconLayout: 'default#imageWithContent',
+                iconImageHref: 'img/save.svg', // картинка иконки
+                iconImageSize: [39, 39], // размеры картинки
+                iconImageOffset: [-6, -10], // смещение картинки
+                balloonShadow: false,
+                balloonLayout: MyBalloonLayout,
+                balloonContentLayout: MyBalloonContentLayout,
+                balloonPanelMaxMapArea: 0,
+                hideIconOnBalloonOpen: false,
             }));
 
 
