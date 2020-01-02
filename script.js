@@ -120,7 +120,7 @@ $(document).ready(function () {
                 // preset: 'islands#icon',
                 // iconColor: '#f78888'
                 iconLayout: 'default#imageWithContent',
-                iconImageHref: 'img/save.svg', // картинка иконки
+                iconImageHref: 'img/ico.png', // картинка иконки
                 iconImageSize: [39, 39], // размеры картинки
                 iconImageOffset: [-6, -10], // смещение картинки
                 balloonShadow: false,
