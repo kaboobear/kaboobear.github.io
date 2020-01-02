@@ -721,8 +721,59 @@ textarea:focus::placeholder {
 
 .page1 {
     width: 100vw;
-    height: 200vh;
-    background: #f00;
+    height: 400vh;
+    background: #777;
 }
+
+
+.check-label{
+    display: flex;
+    align-items: center;
+}
+
+.check-label input{
+    display: none;
+}
+
+.check-text{
+
+}
+
+.check-box{
+    width: 20px;
+    height: 20px;
+    border:2px solid #000;
+    margin-right: 15px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Simple */
+.check-label input:checked ~ .check-box:before{
+    content:'';
+    background: #000;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: .3s;
+}
+
+.check-label input:checked ~ .check-box:before{
+    opacity: 1;
+}
+
+/* Custom */
+/* .check-label input:checked ~ .check-box{
+    background: url(img/my-check.svg) no-repeat center;
+    background-size: 70%;
+} */
+
+
+
+
 
 

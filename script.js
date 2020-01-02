@@ -50,7 +50,6 @@ $(document).ready(function () {
 
 
     //Site Tabs
-
     $('.site-tabs-buttons').on('click', 'li:not(.active)', function () {
         $(this)
             .addClass('active').siblings().removeClass('active')
@@ -60,7 +59,6 @@ $(document).ready(function () {
 
 
     // To Top
-
     $(window).on('scroll', function () {
         if ($(document).scrollTop() > 300) {
             $('.to-top').addClass('active');
@@ -83,6 +81,15 @@ $(document).ready(function () {
     })
 
 
+    //Smooth Wheel
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (!isMobile) {
+        luxy.init({
+            wrapper: '.wrapper',
+            wrapperSpeed: 0.1
+        });
+    }
+
 
 
 
@@ -92,6 +99,23 @@ $(document).ready(function () {
 
     //Test
 
+    $(".formName").validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2,
+                normalizer: function (value) {
+                    return $.trim(value);
+                }
+            },
+            pass: {
+                required: true,
+                normalizer: function (value) {
+                    return $.trim(value);
+                }
+            }
+        }
+    });
 
     //Test End
 
