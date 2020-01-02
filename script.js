@@ -115,19 +115,15 @@ $(document).ready(function () {
         myMap.geoObjects
             .add(myGeoObject)
             .add(new ymaps.Placemark([55.964596, 37.912037], {
+                hintContent: 'Custom Baloon Hint',
                 balloonContent: 'Custom Baloon'
             }, {
                 // preset: 'islands#icon',
                 // iconColor: '#f78888'
-                iconLayout: 'default#imageWithContent',
+                iconLayout: 'default#image',
                 iconImageHref: 'img/ico.png', // картинка иконки
-                iconImageSize: [39, 39], // размеры картинки
-                iconImageOffset: [-6, -10], // смещение картинки
-                balloonShadow: false,
-                balloonLayout: MyBalloonLayout,
-                balloonContentLayout: MyBalloonContentLayout,
-                balloonPanelMaxMapArea: 0,
-                hideIconOnBalloonOpen: false,
+                iconImageSize: [50, 50], // размеры картинки
+                iconImageOffset: [-5, -38]
             }));
 
 
