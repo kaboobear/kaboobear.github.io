@@ -96,25 +96,38 @@ $(document).ready(function () {
 
     function init() {
         var myMap = new ymaps.Map("map", {
-                center: [55.964596, 37.912037],
-                zoom: 19
-            })
-
-
-        myMap.geoObjects
-            .add(new ymaps.Placemark([55.964596, 37.912037], {
-                hintContent: 'Custom Baloon Hint',
-                balloonContent: 'Custom Baloon'
-            }, {
-                // preset: 'islands#icon',
-                // iconColor: '#f78888'
-                iconLayout: 'default#image',
-                iconImageHref: 'img/ico.png', // картинка иконки
-                iconImageSize: [50, 50], // размеры картинки
-            }));
-
+            center: [55.964596, 37.912037],
+            zoom: 19
+        });
 
         myMap.behaviors.disable('scrollZoom');
+
+
+        // myMap.geoObjects
+        //     .add(new ymaps.Placemark([55.964596, 37.912037], {
+        //         hintContent: 'Custom Baloon Hint',
+        //         balloonContent: 'Custom Baloon'
+        //     }, {
+        //         // preset: 'islands#icon',
+        //         // iconColor: '#f78888'
+        //         iconLayout: 'default#image',
+        //         iconImageHref: 'img/ico.png', // картинка иконки
+        //         iconImageSize: [30, 30], // размеры картинки
+        //     }));
+
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                hintContent: 'Baloon Hint',
+                balloonContent: 'Baloon Content'
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: 'img/ico.png',
+                iconImageSize: [30, 30],
+            }),
+
+            myMap.geoObjects
+            .add(myPlacemark);
+
     }
 
     //Test End
