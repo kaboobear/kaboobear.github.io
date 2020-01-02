@@ -98,22 +98,10 @@ $(document).ready(function () {
         var myMap = new ymaps.Map("map", {
                 center: [55.964596, 37.912037],
                 zoom: 19
-            }),
-            myGeoObject = new ymaps.GeoObject({
-                // Описание геометрии.
-                geometry: {
-                    type: "Point",
-                    coordinates: [55.964596, 37.912037]
-                },
-                properties: {
-                    iconContent: '',
-                    hintContent: ''
-                }
-            });
+            })
 
 
         myMap.geoObjects
-            .add(myGeoObject)
             .add(new ymaps.Placemark([55.964596, 37.912037], {
                 hintContent: 'Custom Baloon Hint',
                 balloonContent: 'Custom Baloon'
