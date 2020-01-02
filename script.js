@@ -92,16 +92,6 @@ $(document).ready(function () {
 
     //Test
 
-    ymaps.ready(init);
-
-    function init() {
-        var myMap = new ymaps.Map("map", {
-            center: [55.964596, 37.912037],
-            zoom: 19
-        });
-
-        myMap.behaviors.disable('scrollZoom');
-    }
 
     //Test End
 

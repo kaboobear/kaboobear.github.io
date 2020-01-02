@@ -726,12 +726,3 @@ textarea:focus::placeholder {
 }
 
 
-.map-wrapper{
-    width: 100%;
-    height: 500px;
-}
-
-#map{
-    height: 100%;
-    width: 100%;
-}
