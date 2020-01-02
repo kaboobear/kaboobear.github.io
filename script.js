@@ -117,15 +117,15 @@ $(document).ready(function () {
 
 
         myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                hintContent: 'Baloon Hint',
-                balloonContent: 'Baloon Content'
-            }, {
-                iconLayout: 'default#image',
-                iconImageHref: 'img/ico.png',
-                iconImageSize: [30, 30],
-            }),
+            hintContent: 'Baloon Hint',
+            balloonContent: 'Baloon Content'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/ico.png',
+            iconImageSize: [50, 50],
+        });
 
-            myMap.geoObjects
+        myMap.geoObjects
             .add(myPlacemark);
 
     }
