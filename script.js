@@ -99,6 +99,14 @@ $(document).ready(function () {
             center: [55.964596, 37.912037],
             zoom: 19
         })
+        
+        myMap.geoObjects
+        .add(new ymaps.Placemark([55.964596, 37.912037], {
+            balloonContent: 'Custom baloon'
+        }, {
+            preset: 'islands#icon',
+            iconColor: '#f78888'
+        }));
 
         myMap.behaviors.disable('scrollZoom');
     }                      
