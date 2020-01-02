@@ -123,7 +123,6 @@ $(document).ready(function () {
                 iconLayout: 'default#image',
                 iconImageHref: 'img/ico.png', // картинка иконки
                 iconImageSize: [50, 50], // размеры картинки
-                iconImageOffset: [-5, -38]
             }));
 
 
