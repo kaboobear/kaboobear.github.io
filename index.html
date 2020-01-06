@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="libs/animate.css">
     <link rel="stylesheet" href="libs/fancybox.min.css">
     <link rel="stylesheet" href="libs/datepicker.min.css">
+    <link rel="stylesheet" href="libs/loaders.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -64,6 +65,18 @@
                         Developer Tips
                     </span>
                 </a>
+
+                <div class="ham darker">
+                    <div class="ham-btn invert">
+                        <img src="img/my-ham.svg" alt="">
+                    </div>
+
+                    <ul class="ham-nav">
+                        <li><a href="template.html">Template</a></li>
+                        <li><a href="index.html" class="active">Tips</a></li>
+                        <li><a href="snippets.html">Snippets</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -73,11 +86,37 @@
 
 
 
+        <div class="top-section">
+            <div class="container">
+                <div class="flex-wrap">
+                    <div class="simple-input">
+                        <input class="main-search" type="text" placeholder="Search...">
+                    </div>
+
+                    <ul class="categories">
+                        <li class="active">All</li>
+                        <li>Main</li>
+                        <li>Form</li>
+                        <li>Other</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
 
         <div class="items-section">
+
+            <div class="empty-message">
+                <div class="img"><img src="img/sad.svg"></div> No Tips Found
+            </div>
+
+
             <div class="container">
                 <!--------------------------------------------Mobile Menu------------------------------------>
-                <div class="item">
+                <div class="item main-category">
                     <div class="glob-title">
                         Mobile Menu
                     </div>
@@ -207,7 +246,7 @@ $(".close").click(function(){
 
 
 
-                <div class="item">
+                <div class="item main-category">
                     <!--------------------------------------------Accordeon------------------------------------>
                     <div class="glob-title">
                         Accordeon
@@ -330,7 +369,7 @@ $('.acc-item').on("click", ".acc-button", function () {
 
 
 
-                <div class="item">
+                <div class="item main-category">
                     <!--------------------------------------------Tabs------------------------------------>
                     <div class="glob-title">
                         Tabs
@@ -570,7 +609,7 @@ $('.tabs-buttons').on('click', 'li:not(.active)', function() {
 
 
 
-                <div class="item">
+                <div class="item main-category">
                     <!-- -----------------------------------------------Swiper---------------------------------------------------- -->
                     <div class="glob-title">
                         Swiper
@@ -873,7 +912,7 @@ var swiper1 = new Swiper ('.swiper1', {
 
 
 
-                <div class="item">
+                <div class="item form-category">
                     <!--------------------------------------------Checkbox------------------------------------>
                     <div class="glob-title">
                         Checkbox
@@ -976,7 +1015,7 @@ var swiper1 = new Swiper ('.swiper1', {
 
 
 
-                <div class="item">
+                <div class="item main-category">
                     <!-- ----------------------------------------Popup----------------------------------------->
                     <div class="glob-title">
                         Popup
@@ -1117,7 +1156,207 @@ var swiper1 = new Swiper ('.swiper1', {
 
 
 
-                <div class="item">
+
+
+
+                <div class="item other-category">
+                    <!--------------------------------------------Breadcrumbs------------------------------------>
+                    <div class="glob-title">
+                        Breadcrumbs
+                    </div>
+
+                    <div class="copy-content">
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+<div class="crumbs">
+    <span>
+        <a href="#">
+            <span>One</span>
+        </a>
+    </span>
+
+    <span class="separator">/</span>
+
+    <span>
+        <a href="#">
+            <span>Two</span>
+        </a>
+    </span>
+
+    <span class="separator">/</span>
+
+    <span>
+        Three
+    </span>
+</div>  
+                                            </textarea>
+
+                            <button class="copy-btn copy-html">
+                                <i class="far fa-file-code"></i>
+                                <span>HTML</span>
+                            </button>
+                        </div>
+
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+.crumbs {
+    display: flex;
+}
+
+.crumbs span:not(.separator) {
+    color: #000;
+}
+
+.crumbs .separator {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.crumbs span:not(.separator) a span {
+    color:#ccc;
+    transition: .3s;
+}
+
+.crumbs span:not(.separator) a span:hover{
+    opacity: .7;
+}
+                                            </textarea>
+
+                            <button class="copy-btn copy-css">
+                                <i class="far fa-file-code"></i>
+                                <span>CSS</span>
+                            </button>
+                        </div>
+
+
+                        <!-- <div class="copy-element">
+                            <textarea class="copy-text">
+
+                                            </textarea>
+
+                            <button class="copy-btn copy-js">
+                                <i class="far fa-file-code"></i>
+                                <span>JS</span>
+                            </button>
+                        </div> -->
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="item other-category">
+                    <!--------------------------------------------Pagination------------------------------------>
+                    <div class="glob-title">
+                        Pagination
+                    </div>
+
+                    <div class="copy-content">
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+<ul class="pagination">
+    <li><a href="#" class="prev unactive"></a></li>
+    <li><span class="current">1</span></li>
+    <li><a href="#">2</a></li>
+    <li class="dots-cont"><span class="dots">...</span></li>
+    <li><a href="#">10</a></li>
+    <li><a href="#" class="next rotate"></a></li>
+</ul>  
+                                            </textarea>
+
+                            <button class="copy-btn copy-html">
+                                <i class="far fa-file-code"></i>
+                                <span>HTML</span>
+                            </button>
+                        </div>
+
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+.pagination {
+    display: flex;
+}
+
+.pagination li > * {
+    background: #ccc;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.pagination li .current {
+    background: #888
+}
+
+.pagination li+li {
+    margin-left: 12px;
+}
+
+.pagination li:not(.dots-cont):hover> a:not(.current) {
+    opacity: .7;
+}
+
+.pagination span.dots {
+    cursor: default;
+}
+
+.pagination li .dots {
+    width: 25px;
+    background: none;
+}
+
+.pagination li .prev,
+.pagination li .next {
+    background: #ccc url(img/my-arr-l.svg) no-repeat center;
+    background-size: 10px;
+}
+
+.pagination li .unactive {
+
+}
+                                            </textarea>
+
+                            <button class="copy-btn copy-css">
+                                <i class="far fa-file-code"></i>
+                                <span>CSS</span>
+                            </button>
+                        </div>
+
+
+                        <!-- <div class="copy-element">
+                            <textarea class="copy-text">
+
+                                            </textarea>
+
+                            <button class="copy-btn copy-js">
+                                <i class="far fa-file-code"></i>
+                                <span>JS</span>
+                            </button>
+                        </div> -->
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+                <div class="item other-category">
                     <!-- ----------------------------------------To The Top------------------------------------------>
                     <div class="glob-title">
                         Scroll To The Top
@@ -1209,7 +1448,7 @@ $('.to-top').on('click', function () {
 
 
 
-                <div class="item">
+                <div class="item other-category">
                     <!-- ----------------------------------------Loader--------------------------------------- -->
                     <div class="glob-title">
                         Preloader
@@ -1314,7 +1553,7 @@ $(window).on('load', function () {
 
 
 
-                <div class="item">
+                <div class="item other-category">
                     <!-- ----------------------------------------Locker--------------------------------------- -->
                     <div class="glob-title">
                         Size Locker
@@ -1388,7 +1627,7 @@ $(window).on('load', function () {
 
 
 
-                <div class="item">
+                <div class="item form-category">
                     <!-- ------------------------------------------Datepicker-------------------------------- -->
                     <div class="glob-title">
                         Datepicker
@@ -1464,7 +1703,7 @@ function isElementInViewport(el) {
 
 
 
-                <div class="item">
+                <div class="item other-category">
                     <!-- ------------------------------------------Typing Effect---------------------------------->
                     <div class="glob-title">
                         Typing Effect
@@ -1581,7 +1820,7 @@ if (textArray.length) setTimeout(type, newTextDelay + 250);
 
 
 
-                <div class="item">
+                <div class="item form-category">
                     <!--------------------------------------------Counter------------------------------------>
                     <div class="glob-title">
                         Counter
@@ -1795,203 +2034,9 @@ $('.plus').on('click',function () {
 
 
 
-                <div class="item">
-                    <!--------------------------------------------Breadcrumbs------------------------------------>
-                    <div class="glob-title">
-                        Breadcrumbs
-                    </div>
-
-                    <div class="copy-content">
-                        <div class="copy-element">
-                            <textarea class="copy-text">
-<div class="crumbs">
-    <span>
-        <a href="#">
-            <span>One</span>
-        </a>
-    </span>
-
-    <span class="separator">/</span>
-
-    <span>
-        <a href="#">
-            <span>Two</span>
-        </a>
-    </span>
-
-    <span class="separator">/</span>
-
-    <span>
-        Three
-    </span>
-</div>  
-                                            </textarea>
-
-                            <button class="copy-btn copy-html">
-                                <i class="far fa-file-code"></i>
-                                <span>HTML</span>
-                            </button>
-                        </div>
 
 
-
-                        <div class="copy-element">
-                            <textarea class="copy-text">
-.crumbs {
-    display: flex;
-}
-
-.crumbs span:not(.separator) {
-    color: #000;
-}
-
-.crumbs .separator {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-.crumbs span:not(.separator) a span {
-    color:#ccc;
-    transition: .3s;
-}
-
-.crumbs span:not(.separator) a span:hover{
-    opacity: .7;
-}
-                                            </textarea>
-
-                            <button class="copy-btn copy-css">
-                                <i class="far fa-file-code"></i>
-                                <span>CSS</span>
-                            </button>
-                        </div>
-
-
-                        <!-- <div class="copy-element">
-                            <textarea class="copy-text">
-
-                                            </textarea>
-
-                            <button class="copy-btn copy-js">
-                                <i class="far fa-file-code"></i>
-                                <span>JS</span>
-                            </button>
-                        </div> -->
-                    </div>
-                </div>
-
-
-
-
-
-
-                <div class="item">
-                    <!--------------------------------------------Pagination------------------------------------>
-                    <div class="glob-title">
-                        Pagination
-                    </div>
-
-                    <div class="copy-content">
-                        <div class="copy-element">
-                            <textarea class="copy-text">
-<ul class="pagination">
-    <li><a href="#" class="prev unactive"></a></li>
-    <li><span class="current">1</span></li>
-    <li><a href="#">2</a></li>
-    <li class="dots-cont"><span class="dots">...</span></li>
-    <li><a href="#">10</a></li>
-    <li><a href="#" class="next rotate"></a></li>
-</ul>  
-                                            </textarea>
-
-                            <button class="copy-btn copy-html">
-                                <i class="far fa-file-code"></i>
-                                <span>HTML</span>
-                            </button>
-                        </div>
-
-
-
-                        <div class="copy-element">
-                            <textarea class="copy-text">
-.pagination {
-    display: flex;
-}
-
-.pagination li > * {
-    background: #ccc;
-    color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    transition: .3s;
-    cursor: pointer;
-}
-
-.pagination li .current {
-    background: #888
-}
-
-.pagination li+li {
-    margin-left: 12px;
-}
-
-.pagination li:not(.dots-cont):hover> a:not(.current) {
-    opacity: .7;
-}
-
-.pagination span.dots {
-    cursor: default;
-}
-
-.pagination li .dots {
-    width: 25px;
-    background: none;
-}
-
-.pagination li .prev,
-.pagination li .next {
-    background: #ccc url(img/my-arr-l.svg) no-repeat center;
-    background-size: 10px;
-}
-
-.pagination li .unactive {
-
-}
-                                            </textarea>
-
-                            <button class="copy-btn copy-css">
-                                <i class="far fa-file-code"></i>
-                                <span>CSS</span>
-                            </button>
-                        </div>
-
-
-                        <!-- <div class="copy-element">
-                            <textarea class="copy-text">
-
-                                            </textarea>
-
-                            <button class="copy-btn copy-js">
-                                <i class="far fa-file-code"></i>
-                                <span>JS</span>
-                            </button>
-                        </div> -->
-                    </div>
-                </div>
-
-
-
-
-
-
-
-
-
-
-                <div class="item">
+                <div class="item form-category">
                     <!--------------------------------------------Select------------------------------------>
                     <div class="glob-title">
                         Select
@@ -2071,7 +2116,7 @@ $('select').niceSelect();
 
 
 
-                <div class="item">
+                <div class="item main-category">
                     <!--------------------------------------------Table-Slider------------------------------------>
                     <div class="glob-title">
                         Table-Slider
@@ -2352,7 +2397,7 @@ var swiperTable = new Swiper('.swiper-table', {
 
 
 
-                <div class="item">
+                <div class="item form-category">
                     <!--------------------------------------------Price Filter------------------------------------>
                     <div class="glob-title">
                         Price Filter
@@ -2489,7 +2534,7 @@ priceFilter.noUiSlider.on('update', function (values, handle) {
 
 
 
-                <div class="item">
+                <div class="item main-category">
                     <!--------------------------------------------Map------------------------------------>
                     <div class="glob-title">
                         Map
@@ -2721,7 +2766,7 @@ if (!isMobile) {
 
 
 
-                <div class="item">
+                <div class="item  other-category">
                     <!--------------------------------------------Timer------------------------------------>
                     <div class="glob-title">
                         Timer
@@ -2909,7 +2954,7 @@ if (!(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|ela
 
 
 
-                <div class="item">
+                <div class="item  other-category">
                     <!--------------------------------------------Fullpage------------------------------------>
                     <div class="glob-title">
                         Fullpage Scroll
@@ -3108,7 +3153,7 @@ $(".formName").validate({
 
 
 
-                <div class="item">
+                <div class="item  form-category">
                     <!------------------------------------------File Picker----------------------------------------->
                     <div class="glob-title">
                         File Picker
@@ -3250,6 +3295,7 @@ Array.prototype.forEach.call(t, function (e) {
     <script src="libs/clipboard.js"></script>
     <script src="libs/fancybox.min.js"></script>
     <script src="libs/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.6/fuse.min.js"></script>
     <script src="libs/luxy.min.js"></script>
     <script src="libs/wow.min.js"></script>
     <script src="script.js"></script>
