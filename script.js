@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     // Match Height
-    // $('').matchHeight();
+    // $('.item-img img').matchHeight();
 
 
 
@@ -100,9 +100,9 @@ $(document).ready(function () {
         var category = $(this).text().toLowerCase() + '-category'
 
         if (category != 'all-category') {
-            $('.item').css('display','none');
+            $('.item').css('display', 'none');
             $('.item').each(function () {
-                if ($(this).hasClass(category)) $(this).css('display','inline-block');
+                if ($(this).hasClass(category)) $(this).css('display', 'inline-block');
             })
         } else {
             $('.item').fadeIn(300);
@@ -112,41 +112,47 @@ $(document).ready(function () {
 
 
     //Search Filter
-    var typingTimer; 
-    var doneTypingInterval = 150;
     $('.main-search').on('keyup', function () {
-        clearTimeout(typingTimer);
-        typingTimer = setTimeout(function(){
-            $('.item').fadeOut(300);
-            $('.categories li').removeClass('active');
-            $('.categories li').eq(0).addClass('active');
+        $('.items-section .item').fadeOut(0);
+        $('.item-wrap').fadeOut(0);
 
-            if ($('.main-search').val() !== '') {
-                var results = fuse.search($('.main-search').val());
+        $('.categories li').removeClass('active');
+        $('.categories li').eq(0).addClass('active');
 
-                if (results != '') {
-                    $('.empty-message').fadeOut().removeClass('active');
+        if ($('.main-search').val() !== '') {
+            var results = fuse.search($('.main-search').val());
 
+            if (results != '') {
+                $('.empty-message').fadeOut(0).removeClass('active');
+
+                if ($('.snippets-section').length == 0) {
                     $('.item').each(function () {
                         for (var x = 0; x < results.length; x++) {
                             if (results[x] == $(this).children('.glob-title').text().trim()) {
-                                $(this).fadeIn(200);
+                                $(this).fadeIn(0);
                             }
                         }
                     })
                 } else {
-                    $('.empty-message').fadeIn().addClass('active');
+                    $('.item-wrap').each(function () {
+                        for (var y = 0; y < results.length; y++) {
+                            if (results[y] == $(this).find('.glob-title').text().trim()) {
+                                $(this).fadeIn(0);
+                            }
+                        }
+                    })
                 }
             } else {
-                $('.item').fadeIn(300);
+                $('.empty-message').fadeIn(0).addClass('active');
             }
+        } else {
+            $('.empty-message').fadeOut(0).removeClass('active');
+            $('.items-section .item').fadeIn(0);
+            $('.item-wrap').fadeIn(0);
+        }
 
-        }, doneTypingInterval);
     });
 
-    $('.main-search').on('keydown', function () {
-        clearTimeout(typingTimer);
-    });
 
     var i = 0;
     var arr = [];
@@ -172,10 +178,10 @@ $(document).ready(function () {
     //Nav
     $(".ham-btn").click(function () {
         if ($(this).hasClass('active')) {
-            $('.ham-nav').fadeOut();
+            $('.ham-nav').slideUp();
             $(this).removeClass('active');
         } else {
-            $('.ham-nav').fadeIn();
+            $('.ham-nav').slideDown();
             $(this).addClass('active');
         }
     })
@@ -186,7 +192,7 @@ $(document).ready(function () {
 
         if (!div.is(e.target) && div.has(e.target).length === 0 && !div2.is(e.target) && div2.has(e.target).length === 0) {
             div.removeClass('active');
-            div2.fadeOut();
+            div2.slideUp();
         }
     });
 
@@ -195,9 +201,107 @@ $(document).ready(function () {
 
 
 
+
+
+    //Name input
+    $(".card-name-btn").click(function () {
+        if ($(this).hasClass('active')) {
+            $('.glob-title .simple-input').fadeOut();
+            $(this).removeClass('active');
+        } else {
+            $('.glob-title .simple-input').fadeIn();
+            $(this).addClass('active');
+        }
+    })
+
+
+
+
+
+    //Generate card code
+    $(".extra-name-input").keyup(function () {
+        var cardName = $(this).val();
+
+        var cssString = `.${cardName}-items{ 
+            display: flex;
+            flex-wrap: wrap;
+            margin: -15px;
+        }
+        
+        .${cardName}-item-wrap{
+            width: calc(100%/3);
+            padding: 15px;
+        }
+        
+        .${cardName}-item{
+            background: none;
+            border:none;
+            padding: 0;
+            border-radius: 0;
+            margin-bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .${cardName}-item-img img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .${cardName}-item-info{
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .${cardName}-item-title{
+        
+        }
+        
+        .${cardName}-item-text{
+        
+        }`
+
+        var htmlString = `<div class="${cardName}-items">
+        <div class="${cardName}-item-wrap">
+            <div class="${cardName}-item">
+                <div class="${cardName}-item-img">
+                    <img src="img/test-wide.jpg" alt="">
+                </div>
+    
+                <div class="${cardName}-item-info">
+                    <div class="${cardName}-item-title">
+                        Title text
+                    </div>
+    
+                    <div class="${cardName}-item-text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores provident impedit
+                        perspiciatis expedita beatae.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>`
+
+        var jsString = `$('.${cardName}-item-img img').matchHeight();`
+
+        $('.css-copy-text').val(cssString);
+        $('.js-copy-text').val(jsString);
+        $('.html-copy-text').val(htmlString);
+    })
+
+
+
+
+
+
+
+
+
     //Test
 
-
+    
 
     //Test End
 
@@ -209,6 +313,8 @@ $(window).on('load', function () {
     setTimeout(function () {
         $('.preloader').addClass('active');
         $('body').css('overflow', 'visible');
-    }, 1500)
-
+        setTimeout(function () {
+            $('.preloader').css('display', 'none');
+        }, 700)
+    }, 1000)
 })
