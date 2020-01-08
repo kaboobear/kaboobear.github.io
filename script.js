@@ -316,5 +316,5 @@ $(window).on('load', function () {
         setTimeout(function () {
             $('.preloader').css('display', 'none');
         }, 700)
-    }, 1000)
+    }, 0)
 })

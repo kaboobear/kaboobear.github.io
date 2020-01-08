@@ -387,7 +387,7 @@ textarea:focus::placeholder {
 
 .header-section .ham-btn:hover,
 .header-section .ham-btn.active {
-    opacity: .7;
+    /* opacity: .7; */
     transform: scale(.9);
 }
 
@@ -476,10 +476,11 @@ textarea:focus::placeholder {
     background: #f78888;
     z-index: 2;
     margin-top: auto;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, .2);
 }
 
 .footer-text {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 300;
     letter-spacing: .5px;
     color: #fff;
@@ -487,15 +488,15 @@ textarea:focus::placeholder {
 }
 
 .footer-text .auth {
-    font-size: 25px;
-    font-weight: 600;
-    margin-left: 3px;
+    font-size: 28px;
+    font-weight: 900;
+    margin-left: 5px;
     color: #fff;
     transition: .3s
 }
 
 .footer-text .auth:hover {
-    opacity: .7;
+    transform: scale(.9);
 }
 
 
@@ -978,7 +979,6 @@ textarea:focus::placeholder {
 
 .download-button:hover {
     box-shadow: 0px 14px 25px rgba(255, 255, 255, 0.4);
-    transform: scale(1.05);
 }
 
 .download-button:hover .img {}
@@ -1134,6 +1134,59 @@ textarea:focus::placeholder {
 }
 
 
+
+
+
+
+
+
+
+.pages-navigation .container{
+    width: 100%;
+}
+
+.pages-navigation .container .flex-wrap{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.pages-navigation{
+    display: flex;
+    margin-bottom: 50px;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.navigation-item-wrap{
+    width: 33.33333%;
+    padding: 0 5px;
+}
+
+.navigation-item{
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    color: #999;
+    padding: 35px 10px;
+    border-radius: 8px;
+    border:7px solid #ccc;
+    background: #eee;
+    font-weight: 600;
+}
+
+.navigation-item.active{
+    /* border-color: #f78888;
+    color:#f78888; */
+}
+
+.navigation-item:not(.active){
+    transform: scale(.75);
+    transition: .3s;
+}
+
+.navigation-item:not(.active):hover{
+    transform: scale(.8);
+}
 
 
 
