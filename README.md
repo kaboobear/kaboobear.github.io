@@ -15,7 +15,7 @@ http://github.com - automatic!
 [GitHub](http://github.com)
 <br>
 
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+[#Click to Use](https://kaboobear.github.io)
 
 
 ### You can use it:
