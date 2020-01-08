@@ -10,12 +10,9 @@
 
 
 <br>
-<h2><a href="https://kaboobear.github.io"> Click to Use </a></h2>
-http://github.com - automatic!
-[GitHub](http://github.com)
+### Demo
+[kaboobear.github.io](https://kaboobear.github.io)
 <br>
-
-[#Click to Use](https://kaboobear.github.io)
 
 
 ### You can use it:
