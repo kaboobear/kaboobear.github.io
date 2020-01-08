@@ -15,6 +15,9 @@ http://github.com - automatic!
 [GitHub](http://github.com)
 <br>
 
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+
+
 ### You can use it:
 * as a quick solution for your project
 * as your own framework
