@@ -9,8 +9,12 @@
 [![MIT License][license-shield]][license-url]
 
 
-### Demo
-[kaboobear.github.io](https://kaboobear.github.io)
+### How To Use
+⋅⋅* Open the link [kaboobear.github.io](https://kaboobear.github.io)
+⋅⋅* Choose necessary component
+⋅⋅* Copy code in one click
+⋅⋅* Add some styles
+⋅⋅* Enjoy it
 
 
 <br>
