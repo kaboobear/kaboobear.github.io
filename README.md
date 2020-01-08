@@ -36,7 +36,7 @@
 <br>
 <br>
 
-<h2 align="center">Contact Me</h2>
+<h3>Contact Me</h3>
 
 <div>
     <p><b>Telegram:</b> @kaboo_bear </p>
