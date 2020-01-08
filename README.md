@@ -8,6 +8,13 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
+### What is this?
++ Optimized template for quick project start
++ Pack of the most usable Front-end plugins
++ Library of amazing components for every taste
++ Lightweight framework that saves a lot of your time
+
+
 
 ### How To Use
 + Open the link [kaboobear.github.io](https://kaboobear.github.io)
