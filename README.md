@@ -25,15 +25,10 @@
 <hr>
 
 
-<br>
-
-
 <h2 align="center">Screen</h2>
 
 ![Layout](kaboo.png)
 
-<br>
-<br>
 <br>
 
 <h3>Contact Me</h3>
@@ -46,7 +41,9 @@
     <p><b>Gmail:</b> kaboo.bear@gmail.com </p>
 </div>
 
-
+<div>
+    <p><b>GitHub:</b> https://github.com/kaboobear</p>
+</div>
 
 
 
