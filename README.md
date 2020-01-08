@@ -10,9 +10,8 @@
 
 
 <br>
- 
-
 <a href="https://kaboobear.github.io"> <h1 style="color:#f78888;">Click to Use</h1> </a>
+<br>
 
 ### You can use it:
 * as a quick solution for your project
