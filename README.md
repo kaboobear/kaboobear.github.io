@@ -10,11 +10,11 @@
 
 
 ### How To Use
-⋅⋅* Open the link [kaboobear.github.io](https://kaboobear.github.io)
-⋅⋅* Choose necessary component
-⋅⋅* Copy code in one click
-⋅⋅* Add some styles
-⋅⋅* Enjoy it
++ Open the link [kaboobear.github.io](https://kaboobear.github.io)
++ Choose necessary component
++ Copy code in one click
++ Add some styles
++ Enjoy it
 
 
 <br>
