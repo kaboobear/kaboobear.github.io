@@ -24,9 +24,6 @@
 
 <hr>
 
-
-<h3>Screen</h3>
-
 ![Layout](kaboo.png)
 
 <br>
