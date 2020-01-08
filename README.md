@@ -14,7 +14,7 @@
 + Library of amazing components for every taste
 + Lightweight framework that saves a lot of your time
 
-
+<hr>
 
 ### How To Use
 + Open the link [kaboobear.github.io](https://kaboobear.github.io)
