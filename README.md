@@ -14,7 +14,7 @@
 
  
 
-<a href="https://kaboobear.github.io"> <h2>Developer Tips Project</h2> </a>
+<a href="https://kaboobear.github.io"> <h2>Click Here to Use</h2> </a>
 
 ### You can use it:
 * as a quick solution for your project
