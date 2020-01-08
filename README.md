@@ -25,13 +25,13 @@
 <hr>
 
 
-<h2 align="center">Screen</h2>
+<h3>Screen</h3>
 
 ![Layout](kaboo.png)
 
 <br>
 
-<h3>Contact Me</h3>
+<h3>Contact Me:</h3>
 
 <div>
     <p><b>Telegram:</b> @kaboo_bear </p>
