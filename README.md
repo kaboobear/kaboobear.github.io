@@ -14,7 +14,6 @@
 + Choose necessary component
 + Copy code in one click
 + Add some styles
-+ Enjoy it
 
 
 <br>
