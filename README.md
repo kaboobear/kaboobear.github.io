@@ -10,7 +10,7 @@
 
 
 <br>
-<a href="https://kaboobear.github.io"> <h1>Click to Use</h1> </a>
+<a href="https://kaboobear.github.io"> <h2>Click to Use</h2> </a>
 <br>
 
 ### You can use it:
