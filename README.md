@@ -10,11 +10,9 @@
 
 
 <br>
-<br>
-
  
 
-<a href="https://kaboobear.github.io"> <h2>Click Here to Use</h2> </a>
+<a href="https://kaboobear.github.io"> <h1 style="color:#f78888;">Click to Use</h1> </a>
 
 ### You can use it:
 * as a quick solution for your project
