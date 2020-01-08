@@ -2,7 +2,7 @@
     <img src="https://img.icons8.com/bubbles/100/000000/rocket.png" width="100" height="100">
 </p>
 
-<h1 align="center">Kaboo Bear</h1>
+<h1 align="center">Developer Tips</h1>
 
 [![Forks][forks-shield]][forks-url]
 [![Issues][issues-shield]][issues-url]
