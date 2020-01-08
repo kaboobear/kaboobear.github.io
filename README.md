@@ -22,17 +22,9 @@
 + Copy code in one click
 + Add some styles
 
+<hr>
 
-<br>
 
-
-### You can use it:
-* as a quick solution for your project
-* as your own framework
-* as building blocks for your page
-* just for fun
-
-<br>
 <br>
 
 
@@ -50,14 +42,10 @@
     <p><b>Telegram:</b> @kaboo_bear </p>
 </div>
 
-<hr>
-
 <div>
     <p><b>Gmail:</b> kaboo.bear@gmail.com </p>
 </div>
 
-<hr>
-</div>
 
 
 
