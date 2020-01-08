@@ -11,7 +11,8 @@
 
 <br>
 <h2><a href="https://kaboobear.github.io"> Click to Use </a></h2>
-#[GitHub](http://github.com)
+http://github.com - automatic!
+[GitHub](http://github.com)
 <br>
 
 ### You can use it:
