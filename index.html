@@ -3502,49 +3502,124 @@ $('.submenu .acc-item').on("click", ".acc-button", function () {
 
 
 
-                <!-- <div class="item">
-        <div class="glob-title">
-            Mobile Menu
-        </div>
+                <div class="item">
+                    <div class="glob-title">
+                        Stars
+                    </div>
 
-        <div class="copy-content">
-            <div class="copy-element">
-                <textarea class="copy-text">
+                    <div class="copy-content">
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+<div class="stars-line">
+    <div class="star-value">2</div>
 
+    <div class="star-items">
+        <label class="star-item">
+            <input type="checkbox" name="one" value="1" checked>
+            <span class="box "></span>
+        </label>
+
+        <label class="star-item">
+            <input type="checkbox" name="one" value="2" checked>
+            <span class="box "></span>
+        </label>
+
+        <label class="star-item">
+            <input type="checkbox" name="one" value="3">
+            <span class="box"></span>
+        </label>
+
+        <label class="star-item">
+            <input type="checkbox" name="one" value="4">
+            <span class="box"></span>
+        </label>
+
+        <label class="star-item">
+            <input type="checkbox" name="one" value="5">
+            <span class="box"></span>
+        </label>
+    </div>
+</div>
                                             </textarea>
 
-                <button class="copy-btn copy-html">
-                    <i class="far fa-file-code"></i>
-                    <span>HTML</span>
-                </button>
-            </div>
+                            <button class="copy-btn copy-html">
+                                <i class="far fa-file-code"></i>
+                                <span>HTML</span>
+                            </button>
+                        </div>
 
 
 
-            <div class="copy-element">
-                <textarea class="copy-text">
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+.stars-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.star-items {
+    display: flex;
+}
+
+.star-item + .star-item{
+    margin-left: 5px;
+}
+
+.star-item input {
+    display: none;
+}
+
+.star-value {
+    
+}
+
+.star-item .box {
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: url(img/star.png) no-repeat center;
+    cursor: pointer;
+}
+
+.star-item input:checked~.box {
+    background: url(img/star2.png) no-repeat center;
+}
                                             </textarea>
 
-                <button class="copy-btn copy-css">
-                    <i class="far fa-file-code"></i>
-                    <span>CSS</span>
-                </button>
-            </div>
+                            <button class="copy-btn copy-css">
+                                <i class="far fa-file-code"></i>
+                                <span>CSS</span>
+                            </button>
+                        </div>
 
 
-            <div class="copy-element">
-                <textarea class="copy-text">
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+$('.star-item input').click(function(){
+    $(this).parent().parent().prev().text($(this).val());
 
+    var ind  = 0;
+    var count = $(this).val();
+    $(this).parent().parent().children().each(function(){
+        $(this).find('input').prop('checked', false);
+    })
+
+    $(this).parent().parent().children().each(function(){
+        if((ind++) < count){
+        $(this).find('input').prop('checked', true);
+        }
+    })
+})
                                             </textarea>
 
-                <button class="copy-btn copy-js">
-                    <i class="far fa-file-code"></i>
-                    <span>JS</span>
-                </button>
-            </div>
-        </div>
-    </div> -->
+                            <button class="copy-btn copy-js">
+                                <i class="far fa-file-code"></i>
+                                <span>JS</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
