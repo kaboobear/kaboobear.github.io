@@ -1146,6 +1146,108 @@ var swiper1 = new Swiper ('.swiper1', {
 
 
 
+                <div class="item   form-category">
+                    <!--------------------------------------------Toggler------------------------------------>
+                    <div class="glob-title">
+                        Toggler
+                    </div>
+
+                    <div class="copy-content">
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+<label class="toggle-label">
+    <input type="checkbox" name="check-one" value="1">
+    <span class="toggle-box">
+        <div class="toggle-box-line">
+
+        </div>
+
+        <div class="toggle-box-circle">
+
+        </div>
+    </span>
+    <span class="toggle-text">Item 1</span>
+</label>
+                                            </textarea>
+
+                            <button class="copy-btn copy-html">
+                                <i class="far fa-file-code"></i>
+                                <span>HTML</span>
+                            </button>
+                        </div>
+
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+.toggle-label{
+    display: flex;
+    align-items: center;
+}
+
+.toggle-label input{
+    display: none;
+}
+
+.toggle-text{
+    margin-left: 15px;
+}
+
+.toggle-box{
+    position: relative;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.toggle-box-line{
+    width: 100px;
+    height: 45px;
+    border-radius: 50px;
+    background: #ddd;
+    transition: .3s;
+}
+
+.toggle-box-circle{
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 .25em rgba(0, 0, 0, .3);
+    position: absolute;
+    right:5px;
+    top:5px;
+    width: 35px;
+    height: 35px;
+    transition: .3s;
+}
+
+.toggle-label input:checked ~ .toggle-box .toggle-box-circle{
+    right:calc(100% - 35px - 5px);
+}
+
+.toggle-label input:checked ~ .toggle-box .toggle-box-line{
+    background: #0ebeff;
+}
+                                            </textarea>
+
+                            <button class="copy-btn copy-css">
+                                <i class="far fa-file-code"></i>
+                                <span>CSS</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
                 <div class="item main-category">
                     <!-- ----------------------------------------Popup----------------------------------------->
                     <div class="glob-title">
@@ -1232,8 +1334,7 @@ var swiper1 = new Swiper ('.swiper1', {
     }
     
     .popup .title {
-        font-size: 38px;
-        font-weight: 500;
+        font-size: 25px;
         margin-bottom: 25px;
         text-align: center;
     }
@@ -1254,19 +1355,11 @@ var swiper1 = new Swiper ('.swiper1', {
         .popup-inner{
             width: 100%;
         }
-    
-        .popup .title {
-            font-size: 28px;
-        }
     }
     
     @media (max-width:350px){
         .popup{
             padding: 0px;
-        }
-    
-        .popup .title {
-            font-size: 25px;
         }
     }
                                                 </textarea>
@@ -1334,10 +1427,13 @@ var swiper1 = new Swiper ('.swiper1', {
                             <textarea class="copy-text">
 .crumbs {
     display: flex;
+    flex-wrap:wrap;
 }
 
+/* All Crumbs */
 .crumbs span:not(.separator) {
     color: #000;
+    margin-bottom: 8px;
 }
 
 .crumbs .separator {
@@ -1345,6 +1441,7 @@ var swiper1 = new Swiper ('.swiper1', {
     margin: 0 10px;
 }
 
+/* Not Current Crumb */
 .crumbs span:not(.separator) a span {
     color:#ccc;
     transition: .3s;
@@ -2693,11 +2790,6 @@ priceFilter.noUiSlider.on('update', function (values, handle) {
 <div class="map-wrapper">
     <div id="map"></div>
 </div>
-
-
-
-<script src="https://api-maps.yandex.ru/2.1/?apikey=b814e490-74fd-4432-84de-e30e48342b14
-&lang=ru_RU" type="text/javascript"></script>
                             </textarea>
 
                                         <button class="copy-btn copy-html">
@@ -2756,10 +2848,6 @@ function init() {
 <div class="map-wrapper">
     <div id="map"></div>
 </div>
-
-
-<script src="https://api-maps.yandex.ru/2.1/?apikey=b814e490-74fd-4432-84de-e30e48342b14
-&lang=ru_RU" type="text/javascript"></script>
                             </textarea>
 
                                         <button class="copy-btn copy-html">
@@ -3262,7 +3350,7 @@ var swiperThumbs2 = new Swiper(".gallery-top", {
 
 
 
-                <div class="item">
+                <div class="item other-category">
                     <!------------------------------------------Nested----------------------------------------->
 
                     <div class="glob-title">
@@ -3352,7 +3440,7 @@ nesteds.each(function(){
 
 
 
-                <div class="item">
+                <div class="item other-category">
                     <!------------------------------------------Submenu----------------------------------------->
 
                     <div class="glob-title">
@@ -3502,7 +3590,9 @@ $('.submenu .acc-item').on("click", ".acc-button", function () {
 
 
 
-                <div class="item">
+                <div class="item   form-category">
+                    <!------------------------------------------Stars----------------------------------------->
+
                     <div class="glob-title">
                         Stars
                     </div>
@@ -3621,8 +3711,318 @@ $('.star-item input').click(function(){
                     </div>
                 </div>
 
+
+
+
+
+
+
+
+
+
+                <div class="item   main-category">
+                    <div class="glob-title">
+                        Stars
+                    </div>
+
+                    <div class="copy-content">
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+
+                                            </textarea>
+
+                            <button class="copy-btn copy-html">
+                                <i class="far fa-file-code"></i>
+                                <span>HTML</span>
+                            </button>
+                        </div>
+
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+
+                                            </textarea>
+
+                            <button class="copy-btn copy-css">
+                                <i class="far fa-file-code"></i>
+                                <span>CSS</span>
+                            </button>
+                        </div>
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+
+                                            </textarea>
+
+                            <button class="copy-btn copy-js">
+                                <i class="far fa-file-code"></i>
+                                <span>JS</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <!-- <div class="item   main-category">
+                    <div class="glob-title">
+                        Stars
+                    </div>
+
+                    <div class="copy-content">
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+
+                                            </textarea>
+
+                            <button class="copy-btn copy-html">
+                                <i class="far fa-file-code"></i>
+                                <span>HTML</span>
+                            </button>
+                        </div>
+
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+
+                                            </textarea>
+
+                            <button class="copy-btn copy-css">
+                                <i class="far fa-file-code"></i>
+                                <span>CSS</span>
+                            </button>
+                        </div>
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+
+                                            </textarea>
+
+                            <button class="copy-btn copy-js">
+                                <i class="far fa-file-code"></i>
+                                <span>JS</span>
+                            </button>
+                        </div>
+                    </div>
+                </div> -->
+
+
+
+
+                <!-- <div class="item   main-category">
+                    <div class="glob-title">
+                        Stars
+                    </div>
+
+                    <div class="copy-content">
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+
+                                            </textarea>
+
+                            <button class="copy-btn copy-html">
+                                <i class="far fa-file-code"></i>
+                                <span>HTML</span>
+                            </button>
+                        </div>
+
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+
+                                            </textarea>
+
+                            <button class="copy-btn copy-css">
+                                <i class="far fa-file-code"></i>
+                                <span>CSS</span>
+                            </button>
+                        </div>
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+
+                                            </textarea>
+
+                            <button class="copy-btn copy-js">
+                                <i class="far fa-file-code"></i>
+                                <span>JS</span>
+                            </button>
+                        </div>
+                    </div>
+                </div> -->
+
+
+
+
+                <!-- <div class="item   main-category">
+                    <div class="glob-title">
+                        Stars
+                    </div>
+
+                    <div class="copy-content">
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+
+                                            </textarea>
+
+                            <button class="copy-btn copy-html">
+                                <i class="far fa-file-code"></i>
+                                <span>HTML</span>
+                            </button>
+                        </div>
+
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+
+                                            </textarea>
+
+                            <button class="copy-btn copy-css">
+                                <i class="far fa-file-code"></i>
+                                <span>CSS</span>
+                            </button>
+                        </div>
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+
+                                            </textarea>
+
+                            <button class="copy-btn copy-js">
+                                <i class="far fa-file-code"></i>
+                                <span>JS</span>
+                            </button>
+                        </div>
+                    </div>
+                </div> -->
+
+
+
+
+
+
+
+
+                <!-- <div class="item   main-category">
+                    <div class="glob-title">
+                        Stars
+                    </div>
+
+                    <div class="copy-content">
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+
+                                            </textarea>
+
+                            <button class="copy-btn copy-html">
+                                <i class="far fa-file-code"></i>
+                                <span>HTML</span>
+                            </button>
+                        </div>
+
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+
+                                            </textarea>
+
+                            <button class="copy-btn copy-css">
+                                <i class="far fa-file-code"></i>
+                                <span>CSS</span>
+                            </button>
+                        </div>
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+
+                                            </textarea>
+
+                            <button class="copy-btn copy-js">
+                                <i class="far fa-file-code"></i>
+                                <span>JS</span>
+                            </button>
+                        </div>
+                    </div>
+                </div> -->
+
+
+
+
+
+
+
+                <!-- <div class="item   main-category">
+                    <div class="glob-title">
+                        Stars
+                    </div>
+
+                    <div class="copy-content">
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+
+                                            </textarea>
+
+                            <button class="copy-btn copy-html">
+                                <i class="far fa-file-code"></i>
+                                <span>HTML</span>
+                            </button>
+                        </div>
+
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+
+                                            </textarea>
+
+                            <button class="copy-btn copy-css">
+                                <i class="far fa-file-code"></i>
+                                <span>CSS</span>
+                            </button>
+                        </div>
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+
+                                            </textarea>
+
+                            <button class="copy-btn copy-js">
+                                <i class="far fa-file-code"></i>
+                                <span>JS</span>
+                            </button>
+                        </div>
+                    </div>
+                </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
         </div>
+
+
+
 
 
 
@@ -3657,10 +4057,6 @@ $('.star-item input').click(function(){
                 </div>
             </div>
         </div> -->
-
-
-
-
 
 
 
