@@ -93,7 +93,7 @@ input[type=number] {
     display: flex;
     flex-direction: column;
     position: relative;
-    min-height: 100%;
+    min-height: 100vh;
 }
 
 .container {
@@ -322,7 +322,7 @@ textarea:focus::placeholder {
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
     position: relative;
     background: #f78888;
-    z-index: 1;
+    z-index: 11 !important;
 }
 
 .header-section .container {
@@ -761,14 +761,17 @@ textarea:focus::placeholder {
     }
 }
 
+
 .top-section {
     margin-top: 35px;
+    transition: .3s;
 }
 
 .top-section .flex-wrap {
     width: 100%;
     align-items: center;
-    justify-content: space-between;
+    transition: .3s;
+    /* justify-content: space-between; */
 }
 
 .top-section .container {
@@ -800,6 +803,7 @@ textarea:focus::placeholder {
     color: #999;
     font-weight: 600;
     letter-spacing: 0.5px;
+    transition: .3s;
 }
 
 .top-section .simple-input input::placeholder {
@@ -814,6 +818,8 @@ textarea:focus::placeholder {
     border: 5px solid rgba(0, 0, 0, .1);
     padding: 13px 35px;
     background: #fff;
+    transition: .3s;
+    margin-left: auto;
 }
 
 .categories li {
@@ -826,6 +832,7 @@ textarea:focus::placeholder {
     transition: 0.4s;
     padding-bottom: 1px;
     font-weight: 600;
+    transition: .3s;
 }
 
 .categories li.active {

@@ -301,7 +301,7 @@ $(document).ready(function () {
 
     //Test
 
-    $("img.lazyload").lazyload();
+
 
     //Test End
 
