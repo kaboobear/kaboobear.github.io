@@ -301,27 +301,34 @@ $(document).ready(function () {
 
     //Test
 
-    $('.submenu .acc-item').on("click", ".acc-button", function () {
-        if ($(this).hasClass('active')) {
-            $(this).next().stop(true).fadeOut(500);
-            $(this).removeClass('active');
-        } else {
-            $(this).next().stop(true).fadeIn(500);
-            $(this).addClass('active');
-        }
-    });
+    var nesteds = $('.nested');
+
+    nesteds.each(function () {
+        var nested = $(this).find('*');
+        nested.eq(0).click(function () {
+            if ($(this).hasClass('active')) {
+                nested.eq(1).fadeOut();
+                $(this).removeClass('active');
+            } else {
+                nested.eq(1).fadeIn();
+                $(this).addClass('active');
+            }
+        })
+
+        $(document).mouseup(function (e) {
+            var div = $('.btn');
+            var div2 = $('.elem');
+
+            if (div.hasClass('active')) {
+                if (!div.is(e.target) && div.has(e.target).length === 0 && !div2.is(e.target) && div2.has(e.target).length === 0) {
+                    div.removeClass('active');
+                    div2.fadeOut();
+                }
+            }
+        });
+    })
 
 
-
-    $(".ham").click(function(){
-        $(".mobile-nav").toggleClass('active');
-    });
-    
-    $(".close").click(function(){
-        $(".mobile-nav").toggleClass('active');
-    });
-                            
-                                                
 
     //Test End
 

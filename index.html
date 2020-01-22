@@ -3402,14 +3402,14 @@ var swiperThumbs2 = new Swiper(".gallery-top", {
                             <textarea class="copy-text">
 var nesteds = $('.nested');
 
-nesteds.each(function(){
+nesteds.each(function () {
     var nested = $(this).find('*');
     nested.eq(0).click(function () {
         if ($(this).hasClass('active')) {
-            nested.eq(1).slideUp();
+            nested.eq(1).fadeOut();
             $(this).removeClass('active');
         } else {
-            nested.eq(1).slideDown();
+            nested.eq(1).fadeIn();
             $(this).addClass('active');
         }
     })
@@ -3418,9 +3418,11 @@ nesteds.each(function(){
         var div = nested.eq(0);
         var div2 = nested.eq(1);
 
-        if (!div.is(e.target) && div.has(e.target).length === 0 && !div2.is(e.target) && div2.has(e.target).length === 0) {
-            div.removeClass('active');
-            div2.slideUp();
+        if (div.hasClass('active')) {
+            if (!div.is(e.target) && div.has(e.target).length === 0 && !div2.is(e.target) && div2.has(e.target).length === 0) {
+                div.removeClass('active');
+                div2.fadeOut();
+            }
         }
     });
 })
@@ -3530,8 +3532,7 @@ nesteds.each(function(){
 }
 
 .submenu .acc-content li a{
-    font-size: 18px;
-    font-weight: 500;
+
 }
 
 .submenu a.acc-button {
@@ -3674,8 +3675,7 @@ $('.submenu .acc-item').on("click", ".acc-button", function () {
 }
 
 .submenu .acc-content li a{
-    font-size: 18px;
-    font-weight: 500;
+
 }
 
 .submenu a.acc-button {

@@ -1095,72 +1095,33 @@ textarea:focus::placeholder {
 
 
 
-
-
-.mobile-nav {
-    height: 100vh;
-    width: 320px;
-    position: fixed;
-    right: -360px;
-    top: 0;
-    padding: 30px;
-    padding-top: 80px;
-    background: white;
-    z-index: 100;
-    transition: .3s;
-    box-shadow:0 0 15px 0 rgba(0,0,0,.2);
+.submenu.acc{
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
-.mobile-nav.active {
-    right: 0;
+.submenu .acc-button {
+    padding: 15px;
+    padding-right: 35px;
+    cursor: pointer;
+    transition: .3s;
+    position: relative;
+    width: 100%;
 }
 
-.mobile-nav ul li {
-    margin-bottom: 15px;
+
+
+
+.nested{
+    position: relative;
+    display: inline-block;
 }
 
-.mobile-nav ul li a {
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: black;
-}
-
-.mobile-nav .close {
+.nested > *:nth-child(2){
     position: absolute;
-    top:20px;
-    right: 20px;
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-}
-
-.ham{
+    top:105%;
+    right:0;
     display: none;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
 }
-
-@media (max-width:768px){
-    .ham{
-        display: block;
-    }
-}
-
-@media (max-width:500px){
-    .mobile-nav{
-        width: 100%;
-        right:calc(-100% - 40px);
-    }
-}
-                        
-
-
-
-
-
-
-
+                                            

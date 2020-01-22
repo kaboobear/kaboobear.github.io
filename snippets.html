@@ -119,6 +119,8 @@
             <div class="container">
                 <div class="flex-wrap">
 
+
+
                     <div class="item-wrap">
                         <div class="item main-category">
 
@@ -154,6 +156,10 @@ if (!isMobile) {
                             </div>
                         </div>
                     </div>
+
+
+
+
 
 
                     <div class="item-wrap">
@@ -209,6 +215,11 @@ if (!(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|ela
                     </div>
 
 
+
+
+
+
+
                     <div class="item-wrap">
                         <div class="item main-category">
 
@@ -239,6 +250,10 @@ $(".formName").disableAutoFill();
                             </div>
                         </div>
                     </div>
+
+
+
+
 
 
                     <div class="item-wrap">
@@ -273,6 +288,50 @@ $(".formName").validate({
             normalizer: function (value) {
                 return $.trim(value);
             }
+        }
+    }
+});
+                                    </textarea>
+
+                                    <button class="copy-btn copy-js">
+                                        <i class="far fa-file-code"></i>
+                                        <span>JS</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="item-wrap">
+                        <div class="item main-category">
+
+                            <div class="top-block">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+
+                            <div class="glob-title">
+                                Hide on Out
+                            </div>
+
+                            <div class="copy-content">
+
+
+                                <div class="copy-element">
+                                    <textarea class="copy-text">
+$(document).mouseup(function (e) {
+    var div = $('.btn');
+    var div2 = $('.elem');
+
+    if (div.hasClass('active')) {
+        if (!div.is(e.target) && div.has(e.target).length === 0 && !div2.is(e.target) && div2.has(e.target).length === 0) {
+            div.removeClass('active');
+            div2.fadeOut();
         }
     }
 });
