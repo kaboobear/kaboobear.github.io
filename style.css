@@ -1,9 +1,7 @@
 @font-face {
     font-family: 'Proxima';
 
-    src: url('https://nomail.com.ua/files/eot/a32050a8cd4afc3f7406bc824e209cc8.eot?#iefix') format('embedded-opentype'),
-        url('https://nomail.com.ua/files/woff/a32050a8cd4afc3f7406bc824e209cc8.woff') format('woff'),
-        url('https://nomail.com.ua/files/woff2/a32050a8cd4afc3f7406bc824e209cc8.woff2') format('woff2');
+    src: url('https://nomail.com.ua/files/eot/a32050a8cd4afc3f7406bc824e209cc8.eot?#iefix') format('embedded-opentype'), url('https://nomail.com.ua/files/woff/a32050a8cd4afc3f7406bc824e209cc8.woff') format('woff'), url('https://nomail.com.ua/files/woff2/a32050a8cd4afc3f7406bc824e209cc8.woff2') format('woff2');
 
     font-style: normal;
     font-weight: 400;
@@ -12,9 +10,7 @@
 @font-face {
     font-family: 'Proxima';
 
-    src: url('https://nomail.com.ua/files/eot/1ffd09148efd28d28d2aaac4e451fd1a.eot?#iefix') format('embedded-opentype'),
-        url('https://nomail.com.ua/files/woff/1ffd09148efd28d28d2aaac4e451fd1a.woff') format('woff'),
-        url('https://nomail.com.ua/files/woff2/1ffd09148efd28d28d2aaac4e451fd1a.woff2') format('woff2');
+    src: url('https://nomail.com.ua/files/eot/1ffd09148efd28d28d2aaac4e451fd1a.eot?#iefix') format('embedded-opentype'), url('https://nomail.com.ua/files/woff/1ffd09148efd28d28d2aaac4e451fd1a.woff') format('woff'), url('https://nomail.com.ua/files/woff2/1ffd09148efd28d28d2aaac4e451fd1a.woff2') format('woff2');
 
     font-style: normal;
     font-weight: 300;
@@ -23,20 +19,11 @@
 @font-face {
     font-family: 'Proxima';
 
-    src: url('https://nomail.com.ua/files/eot/e83bfa80b23aa88b149def5b37a5bf9b.eot?#iefix') format('embedded-opentype'),
-        url('https://nomail.com.ua/files/woff/e83bfa80b23aa88b149def5b37a5bf9b.woff') format('woff'),
-        url('https://nomail.com.ua/files/woff2/e83bfa80b23aa88b149def5b37a5bf9b.woff2') format('woff2');
+    src: url('https://nomail.com.ua/files/eot/e83bfa80b23aa88b149def5b37a5bf9b.eot?#iefix') format('embedded-opentype'), url('https://nomail.com.ua/files/woff/e83bfa80b23aa88b149def5b37a5bf9b.woff') format('woff'), url('https://nomail.com.ua/files/woff2/e83bfa80b23aa88b149def5b37a5bf9b.woff2') format('woff2');
 
     font-style: normal;
     font-weight: 600;
 }
-
-
-
-
-
-
-
 
 *,
 *::after,
@@ -48,8 +35,7 @@
 }
 
 ::-webkit-scrollbar {
-    /* width: 4px; */
-    width: 0px;
+    width: 0;
 }
 
 ::-webkit-scrollbar-track {
@@ -92,8 +78,8 @@ img {
     height: auto;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
@@ -101,13 +87,6 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
 }
-
-
-
-
-
-
-
 
 .wrapper {
     overflow: hidden;
@@ -124,7 +103,7 @@ input[type=number] {
 }
 
 .animated {
-    animation-duration: .6s;
+    animation-duration: 0.6s;
 }
 
 .flex-wrap {
@@ -140,11 +119,11 @@ input[type=number] {
 }
 
 .animate {
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .animate:hover {
-    opacity: .7;
+    opacity: 0.7;
 }
 
 .allPages {
@@ -167,7 +146,6 @@ input[type=number] {
     max-width: 300px;
 }
 
-
 .allPages-title {
     font-size: 40px;
     margin-bottom: 45px;
@@ -180,8 +158,7 @@ input[type=number] {
 .allPages-title:after {
     content: '';
     display: block;
-    margin: 0 auto;
-    margin-top: 20px;
+    margin: 20px auto 0;
     width: 65px;
     height: 7.5px;
     background: #8ee4af;
@@ -209,7 +186,7 @@ input[type=number] {
     font-weight: 400;
     line-height: 22px;
     color: white;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .allPages li a:hover {
@@ -224,7 +201,7 @@ input[type=number] {
     color: #ffffff;
     font-size: 22px;
     cursor: pointer;
-    transition: .3s;
+    transition: 0.3s;
     max-width: 100%;
     width: 100%;
 }
@@ -240,8 +217,6 @@ input[type=number] {
 .fancybox-button--zoom {
     display: none !important;
 }
-
-
 
 .simple-input {
     width: 100%;
@@ -262,30 +237,21 @@ textarea {
     height: 130px;
 }
 
-textarea:focus,
-input:focus {
+input:focus,
+textarea:focus {
     border-color: none;
 }
 
-textarea::placeholder,
-input::placeholder {
-    opacity: .7;
-    ;
-    transition: .3s;
+input::placeholder,
+textarea::placeholder {
+    opacity: 0.7;
+    transition: 0.3s;
 }
 
 input:focus::placeholder,
 textarea:focus::placeholder {
     opacity: 0;
 }
-
-
-
-
-
-
-
-
 
 .items-section {
     padding-top: 35px;
@@ -317,9 +283,6 @@ textarea:focus::placeholder {
     transform: translate(-50%, -50%);
     z-index: 3;
 }
-
-
-
 
 .empty-message.active {
     display: flex !important;
@@ -354,8 +317,8 @@ textarea:focus::placeholder {
 }
 
 .header-section {
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 0;
+    padding-bottom: 0;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
     position: relative;
     background: #f78888;
@@ -378,15 +341,15 @@ textarea:focus::placeholder {
     width: 35px;
     height: 35px;
     cursor: pointer;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .header-section .ham-btn {
-    transition: .3s;
+    transition: 0.3s;
 }
 
-.header-section .ham-btn:hover,
-.header-section .ham-btn.active {
+.header-section .ham-btn.active,
+.header-section .ham-btn:hover {
     /* opacity: .7; */
     transform: scale(.9);
 }
@@ -409,7 +372,7 @@ textarea:focus::placeholder {
     font-size: 20px;
     font-weight: 600;
     width: 100%;
-    transition: .3s;
+    transition: 0.3s;
     cursor: pointer;
 }
 
@@ -427,14 +390,12 @@ textarea:focus::placeholder {
     border-top: 1px solid #bbb;
 }
 
-
-
 .header-section .ico {
     display: flex;
     width: max-content;
     align-items: center;
     cursor: pointer;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .header-section .ico:hover {
@@ -459,16 +420,9 @@ textarea:focus::placeholder {
 .header-section .ico .text {
     font-size: 34px;
     font-weight: 600;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     color: #fff;
 }
-
-
-
-
-
-
-
 
 .footer-section {
     padding: 15px 0;
@@ -482,7 +436,7 @@ textarea:focus::placeholder {
 .footer-text {
     font-size: 18px;
     font-weight: 300;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     color: #fff;
     text-align: center;
 }
@@ -492,28 +446,19 @@ textarea:focus::placeholder {
     font-weight: 900;
     margin-left: 5px;
     color: #fff;
-    transition: .3s
+    transition: 0.3s;
 }
 
 .footer-text .auth:hover {
     transform: scale(.9);
 }
 
-
-
-
-
-
-
-
-
-
 .glob-title {
     font-size: 30px;
     font-weight: 600;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     text-align: center;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .glob-title.active:after {
@@ -523,45 +468,39 @@ textarea:focus::placeholder {
 .glob-title:after {
     content: '';
     display: block;
-    margin: 0 auto;
-    margin-top: 15px;
+    margin: 15px auto 0;
     width: 70px;
     height: 7px;
     background: #f78888;
     margin-bottom: 30px;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .glob-subtitle {
     font-size: 24px;
     font-weight: 600;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     text-align: center;
-    transition: .5s;
-    transition: .3s;
+    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .glob-subtitle:after {
     content: '';
     display: block;
-    margin: 0 auto;
-    margin-top: 7.5px;
-    width: 0px;
+    margin: 7.5px auto 0;
+    width: 0;
     height: 4px;
     background: #f78888;
     margin-bottom: 30px;
-    transition: .5s;
+    transition: 0.5s;
 }
-
-
-
-
 
 .copy-content {
     display: flex;
     justify-content: center;
     position: relative;
-    transition: .5s;
+    transition: 0.5s;
     width: min-content;
     margin: 0 auto;
 }
@@ -574,12 +513,12 @@ textarea:focus::placeholder {
     position: absolute;
     left: -300px;
     width: 696.77px;
-    background: url(img/my-check.svg) no-repeat center, #f78888;
+    background: url("img/my-check.svg") no-repeat center, #f78888;
     background-size: 35px 35px;
     border-radius: 8px;
     transform: translateX(-50%);
     opacity: 0;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .copy-content.active:before {
@@ -597,13 +536,12 @@ textarea:focus::placeholder {
 }
 
 .copy-content .copy-element {
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .copy-content .copy-element+.copy-element {
     margin-left: 35px;
 }
-
 
 .copy-content .copy-btn {
     display: flex;
@@ -613,13 +551,12 @@ textarea:focus::placeholder {
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .copy-content .copy-btn.active {
     cursor: default;
 }
-
 
 .copy-content .copy-btn:not(.active):hover {
     box-shadow: 0 7px 14px rgba(0, 0, 0, .4);
@@ -629,26 +566,26 @@ textarea:focus::placeholder {
     content: '';
     width: 35px;
     height: 35px;
-    background: url(img/save.svg) no-repeat center;
+    background: url("img/save.svg") no-repeat center;
     text-align: center;
     position: absolute;
     left: -120px;
     top: 50%;
     transform: translate(-50%, -50%);
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .copy-content .copy-btn:before {
     content: '';
     width: 35px;
     height: 35px;
-    background: url(img/my-check.svg) no-repeat center;
+    background: url("img/my-check.svg") no-repeat center;
     text-align: center;
     position: absolute;
     left: -120px;
     top: 50%;
     transform: translate(-50%, -50%);
-    transition: .3s;
+    transition: 0.3s;
     z-index: 3;
 }
 
@@ -671,23 +608,23 @@ textarea:focus::placeholder {
     color: white;
     line-height: 1;
     display: block;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .copy-content .copy-btn i {
     font-size: 30px;
     margin-right: 12px;
     color: #fff;
-    transition: .3s;
+    transition: 0.3s;
 }
 
-.copy-content .copy-btn:hover span,
-.copy-content .copy-btn:hover i {
+.copy-content .copy-btn:hover i,
+.copy-content .copy-btn:hover span {
     transform: translateX(200px);
 }
 
-.copy-content .copy-btn.active span,
-.copy-content .copy-btn.active i {
+.copy-content .copy-btn.active i,
+.copy-content .copy-btn.active span {
     opacity: 0;
 }
 
@@ -711,11 +648,6 @@ textarea:focus::placeholder {
     display: none;
 }
 
-
-
-
-
-
 .site-tabs-item {
     display: none;
 }
@@ -728,9 +660,7 @@ textarea:focus::placeholder {
     display: flex;
     max-width: 696.77px;
     justify-content: space-around;
-    margin: 0 auto;
-    margin-bottom: 0px;
-    margin-top: -5px;
+    margin: -5px auto 0;
 }
 
 .site-tabs-buttons li {
@@ -749,7 +679,6 @@ textarea:focus::placeholder {
     width: 120px;
 }
 
-
 .to-top {
     width: 58px;
     height: 58px;
@@ -757,13 +686,13 @@ textarea:focus::placeholder {
     bottom: 20px;
     right: 30px;
     border-radius: 50%;
-    background: url(img/my-arr-b.svg) no-repeat center #fff;
+    background: url("img/my-arr-b.svg") no-repeat center #fff;
     background-size: 15px 25px;
     transform: rotate(180deg);
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, .3);
     z-index: 5;
     cursor: pointer;
-    transition: .5s;
+    transition: 0.5s;
     opacity: 0;
     visibility: hidden;
 }
@@ -776,9 +705,6 @@ textarea:focus::placeholder {
 .to-top:hover {
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, .6);
 }
-
-
-
 
 .load-svg {
     width: 100px;
@@ -796,7 +722,7 @@ textarea:focus::placeholder {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: opacity .7s;
+    transition: opacity 0.7s;
 }
 
 .preloader.active {
@@ -835,10 +761,6 @@ textarea:focus::placeholder {
     }
 }
 
-
-
-
-
 .top-section {
     margin-top: 35px;
 }
@@ -867,19 +789,17 @@ textarea:focus::placeholder {
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
-    background: url(img/search.svg);
+    background: url("img/search.svg");
     display: block;
 }
 
 .top-section .simple-input input {
     border: 5px solid rgba(0, 0, 0, .1);
-    padding: 13px;
-    padding-left: 20px;
-    padding-right: 50px;
+    padding: 13px 50px 13px 20px;
     font-size: 20px;
     color: #999;
     font-weight: 600;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
 }
 
 .top-section .simple-input input::placeholder {
@@ -903,7 +823,7 @@ textarea:focus::placeholder {
     cursor: pointer;
     padding-right: 2px;
     padding-left: 2px;
-    transition: .4s;
+    transition: 0.4s;
     padding-bottom: 1px;
     font-weight: 600;
 }
@@ -915,27 +835,20 @@ textarea:focus::placeholder {
 }
 
 .categories li:not(.active):hover {
-    opacity: .5;
+    opacity: 0.5;
 }
 
 .categories li+li {
     margin-left: 35px;
 }
 
-
-
-
-
-
-
-
 .wrapper-template {
-    background: url(img/bg.jpg) no-repeat center;
+    background: url("img/bg.jpg") no-repeat center;
     background-size: cover;
 }
 
-.wrapper-template .header-section,
-.wrapper-template .footer-section {
+.wrapper-template .footer-section,
+.wrapper-template .header-section {
     background: transparent;
     box-shadow: none;
 }
@@ -963,8 +876,8 @@ textarea:focus::placeholder {
     font-weight: 600;
     width: max-content;
     border-radius: 8px;
-    transition: .3s;
-    box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.3);
+    transition: 0.3s;
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.3);
     display: flex;
     align-items: center;
     animation: ItemUpDown 1s infinite alternate;
@@ -978,7 +891,7 @@ textarea:focus::placeholder {
 }
 
 .download-button:hover {
-    box-shadow: 0px 14px 25px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 14px 25px rgba(255, 255, 255, 0.4);
 }
 
 .download-button:hover .img {}
@@ -990,14 +903,8 @@ textarea:focus::placeholder {
 
     100% {
         transform: translateY(-10px) scale(1.05);
-        ;
     }
 }
-
-
-
-
-
 
 .snippets-section {
     padding-top: 35px;
@@ -1033,10 +940,7 @@ textarea:focus::placeholder {
 
 .snippets-section .flex-wrap .item {
     margin-bottom: 0;
-    padding-top: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 20px;
+    padding: 0 0 20px;
     border-color: #ccc;
 }
 
@@ -1090,12 +994,6 @@ textarea:focus::placeholder {
     margin-left: 10px;
 }
 
-
-
-
-
-
-
 .glob-title {
     position: relative;
 }
@@ -1126,20 +1024,12 @@ textarea:focus::placeholder {
     width: 30px;
     height: 30px;
     cursor: pointer;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .card-name-btn:hover {
-    opacity: .7;
+    opacity: 0.7;
 }
-
-
-
-
-
-
-
-
 
 .pages-navigation .container {
     width: 100%;
@@ -1181,20 +1071,12 @@ textarea:focus::placeholder {
 
 .navigation-item:not(.active) {
     transform: scale(.75);
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .navigation-item:not(.active):hover {
     transform: scale(.8);
 }
-
-
-
-
-
-
-
-
 
 /* Test */
 
@@ -1207,4 +1089,6 @@ textarea:focus::placeholder {
 .page1 .container {
     width: 100%;
 }
+
+
 

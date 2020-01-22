@@ -3844,15 +3844,25 @@ $('.star-item input').click(function(){
 
 
 
-                <!-- <div class="item   main-category">
+                <div class="item   other-category">
+                    <!------------------------------------------Overflow Scroll----------------------------------------->
                     <div class="glob-title">
-                        Stars
+                        Overflow Scroll
                     </div>
 
                     <div class="copy-content">
                         <div class="copy-element">
                             <textarea class="copy-text">
-
+<div class="ul-wrap">
+    <ul>
+        <li>Lorem Lorem Lorem Lorem Lorem1</li>
+        <li>Lorem Lorem 2</li>
+        <li>Lorem Lorem Lorem Lorem3</li>
+        <li>Lorem Lorem 4</li>
+        <li>Lorem Lorem Lorem5</li>
+        <li>Lorem Lorem 6</li>
+    </ul>
+</div>
                                             </textarea>
 
                             <button class="copy-btn copy-html">
@@ -3865,7 +3875,26 @@ $('.star-item input').click(function(){
 
                         <div class="copy-element">
                             <textarea class="copy-text">
+.ul-wrap {
+    overflow: hidden;
+    max-width: 150px;
+}
 
+ul {
+    display: flex;
+    flex-direction: column;
+    margin-right: -50px;
+    padding-right: 50px;
+    overflow-y: scroll;
+}
+
+.mCSB_dragger_bar {
+    background-color: #ccc !important;
+}
+
+.mCSB_draggerRail {
+    background: transparent !important;
+}
                                             </textarea>
 
                             <button class="copy-btn copy-css">
@@ -3877,7 +3906,20 @@ $('.star-item input').click(function(){
 
                         <div class="copy-element">
                             <textarea class="copy-text">
+var count = 4;
+var heightSum = 0;
+$('ul').children().each(function () {
+    if(count > 0){
+        heightSum += $(this).outerHeight();
+        count--;
+    }
+})
 
+$('ul').css('height',heightSum);
+$('ul').mCustomScrollbar({
+    scrollInertia:750,
+    mouseWheel:{ preventDefault:true}
+});
                                             </textarea>
 
                             <button class="copy-btn copy-js">
@@ -3886,7 +3928,7 @@ $('.star-item input').click(function(){
                             </button>
                         </div>
                     </div>
-                </div> -->
+                </div>
 
 
 
@@ -4164,5 +4206,6 @@ $('.star-item input').click(function(){
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.6/fuse.min.js"></script>
     <script src="libs/luxy.min.js"></script>
     <script src="libs/wow.min.js"></script>
+    <script src="libs/mCustomScrollbar.concat.min.js"></script>
     <script src="script.js"></script>
 </body>
