@@ -3450,11 +3450,11 @@ nesteds.each(function(){
 
 
 
-                
+
                 <div class="item main-category">
-                    <!--------------------------------------------Overflow Scroll------------------------------------>
+                    <!--------------------------------------------Submenu------------------------------------>
                     <div class="glob-title">
-                        Overflow Scroll
+                        Submenu
                     </div>
 
 
@@ -3715,12 +3715,14 @@ $('.submenu .acc-item').on("click", ".acc-button", function () {
 }
        
 @media (max-width:768px){
-    .submenu.acc{
-        flex-direction: column;
-    }
-
     .submenu.acc.desk{
         display: none;
+    }
+
+    .submenu .acc-content{
+        left:auto;
+        right:0;
+        top:100%;
     }
 }
                             </textarea>

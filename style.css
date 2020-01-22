@@ -1095,73 +1095,72 @@ textarea:focus::placeholder {
 
 
 
-.submenu.acc{
+
+
+.mobile-nav {
+    height: 100vh;
+    width: 320px;
+    position: fixed;
+    right: -360px;
+    top: 0;
+    padding: 30px;
+    padding-top: 80px;
+    background: white;
+    z-index: 100;
+    transition: .3s;
+    box-shadow:0 0 15px 0 rgba(0,0,0,.2);
     display: flex;
     flex-direction: column;
-    max-width: 400px;
 }
 
-.submenu .acc-item{
-    position: relative;
+.mobile-nav.active {
+    right: 0;
 }
 
-.submenu .acc-button {
-    padding: 15px;
-    padding-right: 35px;
-    cursor: pointer;
-    transition: .3s;
-    position: relative;
-    width: 100%;
+.mobile-nav ul li {
+    margin-bottom: 15px;
 }
 
-.submenu .acc-content li a{
+.mobile-nav ul li a {
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: black;
 }
 
-.submenu a.acc-button {
-    padding-right: 20px;
-}
-
-.submenu .acc-button.active {
-
-}
-
-.submenu .acc-content {
-    display: none;
+.mobile-nav .close {
     position: absolute;
-    left:calc(100% + 15px);
-    top:0;
-}
-
-.submenu .acc-content.active {
-    display: block;
-}
-
-.submenu .acc-button:not(a):after {
-    content: '';
-    background: url(img/my-arr-b.svg) no-repeat center;
-    /* filter:invert(100%); */
+    top:20px;
+    right: 20px;
+    cursor: pointer;
     width: 20px;
-    height: 12px;
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: .5s;
+    height: 20px;
 }
 
-.submenu .acc-button.active:after {
-    transform: translateY(-50%) rotate(180deg);
+.ham{
+    display: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
 }
-       
+
 @media (max-width:768px){
-    .submenu.acc{
-        flex-direction: column;
-    }
-
-    .submenu.acc.desk{
-        display: none;
+    .ham{
+        display: block;
     }
 }
-                                            
+
+@media (max-width:500px){
+    .mobile-nav{
+        width: 100%;
+        right:calc(-100% - 40px);
+    }
+}
+                        
+
+
+
+
+
+
+

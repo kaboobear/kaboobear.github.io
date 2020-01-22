@@ -310,6 +310,17 @@ $(document).ready(function () {
             $(this).addClass('active');
         }
     });
+
+
+
+    $(".ham").click(function(){
+        $(".mobile-nav").toggleClass('active');
+    });
+    
+    $(".close").click(function(){
+        $(".mobile-nav").toggleClass('active');
+    });
+                            
                                                 
 
     //Test End
