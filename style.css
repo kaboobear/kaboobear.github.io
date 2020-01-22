@@ -1091,37 +1091,3 @@ textarea:focus::placeholder {
 }
 
 
-
-
-
-
-.submenu.acc{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-.submenu .acc-button {
-    padding: 15px;
-    padding-right: 35px;
-    cursor: pointer;
-    transition: .3s;
-    position: relative;
-    width: 100%;
-}
-
-
-
-
-.nested{
-    position: relative;
-    display: inline-block;
-}
-
-.nested > *:nth-child(2){
-    position: absolute;
-    top:105%;
-    right:0;
-    display: none;
-}
-                                            
