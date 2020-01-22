@@ -313,7 +313,7 @@ $(".close").click(function(){
 }
 
 .acc-button.active {
-    background: rgba(0,0,0,.3);
+
 }
 
 .acc-button:after {
@@ -445,7 +445,7 @@ $('.acc-item').on("click", ".acc-button", function () {
 }
 
 .tabs-buttons li.active {
-    background: #e0d3d3;
+
 }
 
 .tabs-buttons li + li{
@@ -3440,16 +3440,40 @@ nesteds.each(function(){
 
 
 
-                <div class="item other-category">
-                    <!------------------------------------------Submenu----------------------------------------->
 
+
+
+
+
+
+
+
+
+
+                
+                <div class="item main-category">
+                    <!--------------------------------------------Overflow Scroll------------------------------------>
                     <div class="glob-title">
-                        Submenu
+                        Overflow Scroll
                     </div>
 
-                    <div class="copy-content">
-                        <div class="copy-element">
-                            <textarea class="copy-text">
+
+
+                    <div class="site-tabs">
+                        <ul class="site-tabs-buttons">
+                            <li class="active">
+                                <div class="glob-subtitle">Simple</div>
+                            </li>
+                            <li>
+                                <div class="glob-subtitle">Absolute</div>
+                            </li>
+                        </ul>
+
+                        <div class="site-tabs-items">
+                            <div class="site-tabs-item active">
+                                <div class="copy-content">
+                                    <div class="copy-element">
+                                        <textarea class="copy-text">
 <div class="acc submenu desk">
     <div class="acc-item">
         <div class="acc-button">
@@ -3481,23 +3505,23 @@ nesteds.each(function(){
         </ul>
     </div>
 </div>
-                                            </textarea>
+                            </textarea>
 
-                            <button class="copy-btn copy-html">
-                                <i class="far fa-file-code"></i>
-                                <span>HTML</span>
-                            </button>
-                        </div>
+                                        <button class="copy-btn copy-html">
+                                            <i class="far fa-file-code"></i>
+                                            <span>HTML</span>
+                                        </button>
+                                    </div>
 
 
-
-                        <div class="copy-element">
-                            <textarea class="copy-text">
+                                    <div class="copy-element">
+                                        <textarea class="copy-text">
 .submenu.acc{
     display: flex;
 }
 
 .submenu .acc-button {
+    width: 100%;
     padding: 15px;
     padding-right: 35px;
     cursor: pointer;
@@ -3515,7 +3539,7 @@ nesteds.each(function(){
 }
 
 .submenu .acc-button.active {
-    background: rgba(0,0,0,.1);
+
 }
 
 .submenu .acc-content {
@@ -3553,6 +3577,220 @@ nesteds.each(function(){
         display: none;
     }
 }
+                            </textarea>
+
+                                        <button class="copy-btn copy-css">
+                                            <i class="far fa-file-code"></i>
+                                            <span>CSS</span>
+                                        </button>
+                                    </div>
+
+
+
+                                    <div class="copy-element">
+                                        <textarea class="copy-text">
+$('.submenu .acc-item').on("click", ".acc-button", function () {
+    if ($(this).hasClass('active')) {
+        $(this).next().stop(true).slideUp(500);
+        $(this).removeClass('active');
+    } else {
+        $(this).next().stop(true).slideDown(500);
+        $(this).addClass('active');
+    }
+});
+                            </textarea>
+
+                                        <button class="copy-btn copy-js">
+                                            <i class="far fa-file-code"></i>
+                                            <span>JS</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="site-tabs-item">
+                                <div class="copy-content">
+                                    <div class="copy-element">
+                                        <textarea class="copy-text">
+<div class="acc submenu desk">
+    <div class="acc-item">
+        <div class="acc-button">
+            One
+        </div>
+
+        <ul class="acc-content">
+            <li><a href="#">One</a></li>
+            <li><a href="#">Two</a></li>
+            <li><a href="#">Three</a></li>
+        </ul>
+    </div>
+
+    <div class="acc-item">
+        <a class="acc-button">
+            Two
+        </a>
+    </div>
+
+    <div class="acc-item">
+        <div class="acc-button">
+            Three
+        </div>
+
+        <ul class="acc-content">
+            <li><a href="#">One</a></li>
+            <li><a href="#">Two</a></li>
+            <li><a href="#">Three</a></li>
+        </ul>
+    </div>
+</div>
+                            </textarea>
+
+                                        <button class="copy-btn copy-html">
+                                            <i class="far fa-file-code"></i>
+                                            <span>HTML</span>
+                                        </button>
+                                    </div>
+
+
+                                    <div class="copy-element">
+                                        <textarea class="copy-text">
+.submenu.acc{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+.submenu .acc-item{
+    position: relative;
+}
+
+.submenu .acc-button {
+    padding: 15px;
+    padding-right: 35px;
+    cursor: pointer;
+    transition: .3s;
+    position: relative;
+    width: 100%;
+}
+
+.submenu .acc-content li a{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.submenu a.acc-button {
+    padding-right: 20px;
+}
+
+.submenu .acc-button.active {
+
+}
+
+.submenu .acc-content {
+    display: none;
+    position: absolute;
+    left:calc(100% + 15px);
+    top:0;
+}
+
+.submenu .acc-content.active {
+    display: block;
+}
+
+.submenu .acc-button:not(a):after {
+    content: '';
+    background: url(img/my-arr-b.svg) no-repeat center;
+    /* filter:invert(100%); */
+    width: 20px;
+    height: 12px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .5s;
+}
+
+.submenu .acc-button.active:after {
+    transform: translateY(-50%) rotate(180deg);
+}
+       
+@media (max-width:768px){
+    .submenu.acc{
+        flex-direction: column;
+    }
+
+    .submenu.acc.desk{
+        display: none;
+    }
+}
+                            </textarea>
+
+                                        <button class="copy-btn copy-css">
+                                            <i class="far fa-file-code"></i>
+                                            <span>CSS</span>
+                                        </button>
+                                    </div>
+
+
+
+                                    <div class="copy-element">
+                                        <textarea class="copy-text">
+$('.submenu .acc-item').on("click", ".acc-button", function () {
+    if ($(this).hasClass('active')) {
+        $(this).next().stop(true).fadeOut(500);
+        $(this).removeClass('active');
+    } else {
+        $(this).next().stop(true).fadeIn(500);
+        $(this).addClass('active');
+    }
+});
+                            </textarea>
+
+                                        <button class="copy-btn copy-js">
+                                            <i class="far fa-file-code"></i>
+                                            <span>JS</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+                <div class="item other-category">
+                    <!------------------------------------------Submenu----------------------------------------->
+
+                    <div class="glob-title">
+                        Submenu
+                    </div>
+
+                    <div class="copy-content">
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+
+                                            </textarea>
+
+                            <button class="copy-btn copy-html">
+                                <i class="far fa-file-code"></i>
+                                <span>HTML</span>
+                            </button>
+                        </div>
+
+
+
+                        <div class="copy-element">
+                            <textarea class="copy-text">
+
                                             </textarea>
 
                             <button class="copy-btn copy-css">
@@ -3564,15 +3802,7 @@ nesteds.each(function(){
 
                         <div class="copy-element">
                             <textarea class="copy-text">
-$('.submenu .acc-item').on("click", ".acc-button", function () {
-    if ($(this).hasClass('active')) {
-        $(this).next().stop(true).slideUp(500);
-        $(this).removeClass('active');
-    } else {
-        $(this).next().stop(true).slideDown(500);
-        $(this).addClass('active');
-    }
-});
+
                                             </textarea>
 
                             <button class="copy-btn copy-js">
@@ -3834,6 +4064,9 @@ $('.star-item input').click(function(){
                         </div>
                     </div>
                 </div>
+
+
+
 
 
 

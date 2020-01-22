@@ -301,7 +301,16 @@ $(document).ready(function () {
 
     //Test
 
-
+    $('.submenu .acc-item').on("click", ".acc-button", function () {
+        if ($(this).hasClass('active')) {
+            $(this).next().stop(true).fadeOut(500);
+            $(this).removeClass('active');
+        } else {
+            $(this).next().stop(true).fadeIn(500);
+            $(this).addClass('active');
+        }
+    });
+                                                
 
     //Test End
 

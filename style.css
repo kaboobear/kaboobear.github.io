@@ -1092,3 +1092,76 @@ textarea:focus::placeholder {
 
 
 
+
+
+
+.submenu.acc{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+.submenu .acc-item{
+    position: relative;
+}
+
+.submenu .acc-button {
+    padding: 15px;
+    padding-right: 35px;
+    cursor: pointer;
+    transition: .3s;
+    position: relative;
+    width: 100%;
+}
+
+.submenu .acc-content li a{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.submenu a.acc-button {
+    padding-right: 20px;
+}
+
+.submenu .acc-button.active {
+
+}
+
+.submenu .acc-content {
+    display: none;
+    position: absolute;
+    left:calc(100% + 15px);
+    top:0;
+}
+
+.submenu .acc-content.active {
+    display: block;
+}
+
+.submenu .acc-button:not(a):after {
+    content: '';
+    background: url(img/my-arr-b.svg) no-repeat center;
+    /* filter:invert(100%); */
+    width: 20px;
+    height: 12px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .5s;
+}
+
+.submenu .acc-button.active:after {
+    transform: translateY(-50%) rotate(180deg);
+}
+       
+@media (max-width:768px){
+    .submenu.acc{
+        flex-direction: column;
+    }
+
+    .submenu.acc.desk{
+        display: none;
+    }
+}
+                                            
