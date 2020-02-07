@@ -1,29 +1,6 @@
-@font-face {
-    font-family: 'Proxima';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic');
 
-    src: url('https://nomail.com.ua/files/eot/a32050a8cd4afc3f7406bc824e209cc8.eot?#iefix') format('embedded-opentype'), url('https://nomail.com.ua/files/woff/a32050a8cd4afc3f7406bc824e209cc8.woff') format('woff'), url('https://nomail.com.ua/files/woff2/a32050a8cd4afc3f7406bc824e209cc8.woff2') format('woff2');
 
-    font-style: normal;
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: 'Proxima';
-
-    src: url('https://nomail.com.ua/files/eot/1ffd09148efd28d28d2aaac4e451fd1a.eot?#iefix') format('embedded-opentype'), url('https://nomail.com.ua/files/woff/1ffd09148efd28d28d2aaac4e451fd1a.woff') format('woff'), url('https://nomail.com.ua/files/woff2/1ffd09148efd28d28d2aaac4e451fd1a.woff2') format('woff2');
-
-    font-style: normal;
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: 'Proxima';
-
-    src: url('https://nomail.com.ua/files/eot/e83bfa80b23aa88b149def5b37a5bf9b.eot?#iefix') format('embedded-opentype'), url('https://nomail.com.ua/files/woff/e83bfa80b23aa88b149def5b37a5bf9b.woff') format('woff'), url('https://nomail.com.ua/files/woff2/e83bfa80b23aa88b149def5b37a5bf9b.woff2') format('woff2');
-
-    font-style: normal;
-    font-weight: 600;
-}
 
 *,
 *::after,
@@ -64,7 +41,7 @@ input {
 body {
     color: #495057;
     background: #f8f9fa;
-    font-family: 'Proxima';
+    font-family: 'Helvetica Neue';
     font-size: 14px;
     font-weight: normal;
     font-style: normal;
