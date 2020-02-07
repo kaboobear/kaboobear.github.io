@@ -315,6 +315,6 @@ $(window).on('load', function () {
         $('body').css('overflow', 'visible');
         setTimeout(function () {
             $('.preloader').css('display', 'none');
-        }, 0)
+        }, 750)
     }, 0)
 })
